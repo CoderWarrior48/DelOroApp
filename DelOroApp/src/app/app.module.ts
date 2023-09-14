@@ -6,10 +6,8 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { HomeComponent } from './home/home.component';
+import { MaterialModule } from '../../../DelOroApp/src/app/material/material.module';
 
 @NgModule({
   declarations: [
@@ -17,14 +15,12 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
     AboutComponent,
     ResourcesComponent,
     NavBarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
