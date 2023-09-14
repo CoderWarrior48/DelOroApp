@@ -12,6 +12,8 @@ import { AcademicsComponent } from './academics/academics.component';
 import { AthleticsComponent } from './athletics/athletics.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { CounselingComponent } from './counseling/counseling.component';
+import { ContactComponent } from './contact/contact.component';
+import { MoreComponent } from './more/more.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { CounselingComponent } from './counseling/counseling.component';
     AthleticsComponent,
     ActivitiesComponent,
     CounselingComponent,
+    ContactComponent,
+    MoreComponent,
   ],
   imports: [
     BrowserModule,
