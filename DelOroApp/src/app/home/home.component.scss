@@ -1,0 +1,17 @@
+.intro {
+  float: left;
+  
+  border-radius: 1rem;
+  width: 30%;
+  margin: 100px;
+}
+
+body {
+  background-image: url("../../assets/images/del-oro-campus-backdrop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page {
+  background-image: linear-gradient(135deg,rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0));
+}
