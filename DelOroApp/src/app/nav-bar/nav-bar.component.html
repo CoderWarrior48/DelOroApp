@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button routerLink="/">
+    <mat-icon>home</mat-icon>
+  </button>
+  <button
+    mat-button
+    *ngFor="let item of links"
+    routerLinkActive="selected"
+    [routerLink]="item.path"
+  >
+    {{ item.name }}
+  </button>
+</mat-toolbar>
