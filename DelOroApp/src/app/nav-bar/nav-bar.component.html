@@ -6,29 +6,24 @@
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </a>
+
       <ng-container *ngFor="let item of links">
-        <mat-list-item
-          *ngFor="let item of links"
-          routerLinkActive="selected"
-          [routerLink]="item.path"
-        >
+        <mat-list-item routerLinkActive="selected" [routerLink]="item.path">
           {{ item.name }}
         </mat-list-item>
       </ng-container>
     </mat-nav-list>
   </mat-sidenav>
 
-
-<!-- Toolbar navigation method -->
   <mat-toolbar id="app-toolbar" color="primary">
     <div class="hide-gt-sm">
-      <button mat-icon-button>
+      <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
     </div>
     <button mat-icon-button routerLink="/">
       <!-- <mat-icon>home</mat-icon> -->
-      <img class="img-responsive" src="assets/images/delorologo.png">
+      <img class="img-responsive" src="assets/images/delorologo.png" />
     </button>
     <button
       mat-button
