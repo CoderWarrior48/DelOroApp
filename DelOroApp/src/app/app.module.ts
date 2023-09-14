@@ -8,6 +8,10 @@ import { ResourcesComponent } from './resources/resources.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../../../DelOroApp/src/app/material/material.module';
+import { AcademicsComponent } from './academics/academics.component';
+import { AthleticsComponent } from './athletics/athletics.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { CounselingComponent } from './counseling/counseling.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import { MaterialModule } from '../../../DelOroApp/src/app/material/material.mod
     ResourcesComponent,
     NavBarComponent,
     HomeComponent,
+    AcademicsComponent,
+    AthleticsComponent,
+    ActivitiesComponent,
+    CounselingComponent,
   ],
   imports: [
     BrowserModule,
