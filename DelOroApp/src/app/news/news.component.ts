@@ -8,6 +8,7 @@ import { NewsService} from './news.service';
 })
 export class NewsComponent {
   cards: {
+    tag: string,
     title: string, 
     subtitle: string, 
     avatar: string,

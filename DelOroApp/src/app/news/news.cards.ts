@@ -1,5 +1,6 @@
 export const Cards = [
   {
+    tag: 'academic',
     title:'Connect with a Peer Mentor',
     subtitle:'Peer Mentors are here to help!',
     avatar:'../../assets/images/do-logo.svg',
@@ -10,6 +11,7 @@ export const Cards = [
     
   },
   {
+    tag: 'academic',
     title:'Class Remind Text Codes',
     subtitle:'Peer Mentors are here to help!',
     avatar:'../../assets/images/do-logo.svg',
@@ -19,15 +21,32 @@ export const Cards = [
     
   },
   {
+    tag: 'extracurricular',
     title:'Purchase an ASB Card',
     subtitle:'',
-    avatar:'../../assets/images/do-logo.svg',
-    image: '../../assets/images/remind-logo.png',
+    avatar:'../../assets/images/do-shield.png',
+    image: '../../assets/images/do-bgym.png',
     content: `GET FREE ENTRANCE INTO ALL DEL ORO LEAGUE HOME GAMES!
     <br>
     Also, get discounts to dances, yearbooks, and more!
     <br>
     Check out the form for details on when and how to order. 
+    `
+    
+  },
+  {
+    tag: 'extracurricular',
+    title:'Dances',
+    subtitle:'',
+    avatar:'../../assets/images/do-logo.png',
+    image: '../../assets/images/do-bgym.png',
+    content: `Dance Contract
+    Students must complete a dance contract in order to attend a school dance. Please click the following link to complete: dance contract
+    <br>
+    Guest Pass
+    When can I bring a guest?
+    <br>
+    Print a guest pass for a non-Del Oro student here. Non Del Oro students may attend Homecoming, Sadies, Junior Prom and Senior Ball. The Back to School Dance and Last Chance Dance are for Del Oro students only. 
     `
     
   }
