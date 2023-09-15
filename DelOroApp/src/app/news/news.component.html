@@ -1,69 +1,24 @@
 <h1>Del Oro News</h1>
 <mat-tab-group>
   <mat-tab label="All">
-    <h1> This is working: </h1>
-    <p>{{cards}}<p>
     <ng-container *ngFor="let card of cards">
-    <mat-card>
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{card.title}}</mat-card-title>
-        <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="../../assets/images/eagle-head.png" alt="Photo">
-      <mat-card-content>
-        <p>{{card.content}}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ card.title }}</mat-card-title>
+          <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ card.image }}" alt="Photo" />
+        <mat-card-content>
+          <p [innerHTML]="card.content"></p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
     </ng-container>
-    <!-- News content below (to be requested from backend when available) -->
-    <!-- <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Connect with a Peer Mentor</mat-card-title>
-        <mat-card-subtitle>Peer Mentors are here to help!</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="../../assets/images/eagle-head.png" alt="Photo">
-      <mat-card-content>
-        <p>
-          If you have any questions about Del Oro, need help connecting to clubs, tutors, mental health specialists, or just want to talk, the Peer Mentors are here to help! Use <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKu0nirxqJlKFkPDSKiX1T3i3sLrjo2Qsn1sV4JLuzz1UaUw/viewform?usp=sf_link">this referral form</a> for you or someone else, and we will reach out ASAP! All requests are strictly confidential.  
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Class Remind Text Codes</mat-card-title>
-        <mat-card-subtitle></mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="../../assets/images/remind-logo.png" alt="Photo">
-      <mat-card-content>
-        <p>
-          Don’t miss out on getting important reminders about events and other information from the Del Oro Leadership through the Remind app. If you joined in previous years, you do NOT need to join again! <a href="https://docs.google.com/document/d/1oezdTYC2b50eTzToJO7mZ-4x1-AK-jLgHMf8LGtipsQ/edit?usp=sharing"> Click here </a> to find the correct code based on the year you are graduating and the first letter of your last name. 
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card> -->
-
-    <!-- News content above (to be requested from backend when available) -->
-
   </mat-tab>
-  <mat-tab label="Acadamic"> 
-    Content 2
-   </mat-tab>
-  <mat-tab label="Extracurricular"> 
-    Content 3 
-  </mat-tab>
+  <mat-tab label="Acadamic"> Content 2 </mat-tab>
+  <mat-tab label="Extracurricular"> Content 3 </mat-tab>
 </mat-tab-group>
