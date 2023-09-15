@@ -9,10 +9,12 @@ import { ActivitiesComponent } from '../../../DelOroApp/src/app/activities/activ
 import { CounselingComponent } from '../../../DelOroApp/src/app/counseling/counseling.component';
 import { ContactComponent } from '../../../DelOroApp/src/app/contact/contact.component';
 import { MoreComponent } from '../../../DelOroApp/src/app/more/more.component';
+import { NewsComponent } from '../../../DelOroApp/src/app/news/news.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
+  { path: 'news', component: NewsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'resources', component: ResourcesComponent },
   { path: 'academics', component: AcademicsComponent },

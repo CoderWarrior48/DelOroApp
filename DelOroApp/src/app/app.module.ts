@@ -14,6 +14,7 @@ import { ActivitiesComponent } from './activities/activities.component';
 import { CounselingComponent } from './counseling/counseling.component';
 import { ContactComponent } from './contact/contact.component';
 import { MoreComponent } from './more/more.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MoreComponent } from './more/more.component';
     CounselingComponent,
     ContactComponent,
     MoreComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,

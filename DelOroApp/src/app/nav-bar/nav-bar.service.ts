@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class NavBarService {
   links = [
     { name: 'About', path: '/about' },
+    { name: 'News', path: '/news' },
     { name: 'Resources', path: '/resources' },
     { name: 'Academics', path: '/academics' },
     { name: 'Athletics', path: '/athletics' },
