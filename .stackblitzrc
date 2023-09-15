@@ -1,6 +1,6 @@
 {
   "installDependencies": false,
-  "startCommand": "cd DelOroApp && npm install && npm start",
+  "startCommand": "cd DelOroApp && npm start",
   "env": {
     "NODE_ENV": "development"
   }
