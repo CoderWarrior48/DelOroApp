@@ -24,9 +24,9 @@ export const Cards = [
     avatar:'../../assets/images/do-logo.svg',
     image: '../../assets/images/remind-logo.png',
     content: `GET FREE ENTRANCE INTO ALL DEL ORO LEAGUE HOME GAMES!
-    
+    <br>
     Also, get discounts to dances, yearbooks, and more!
-    
+    <br>
     Check out the form for details on when and how to order. 
     `
     
