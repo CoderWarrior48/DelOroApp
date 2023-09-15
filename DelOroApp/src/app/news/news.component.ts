@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ContentChild } from '@angular/core';
+import { NewsService} from './news.service';
 
 @Component({
   selector: 'app-news',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent {
+  cards: {
+    title: string, 
+    subtitle: string, 
+    avatar: string,
+    image: string,
+    content: string,
+  }[];
 
+  constructor (private _newsService: NewsService) {
+    this.cards = _newsService.cards;
+
+  }
 }
