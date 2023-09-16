@@ -28,7 +28,7 @@ export const Cards = [
     title:'Purchase an ASB Card',
     subtitle:'',
     avatar:'../../assets/images/do-shield.png',
-    image: '../../assets/images/do-bgym.png',
+    image: '../../assets/images/do-stadium.png',
     content: `GET FREE ENTRANCE INTO ALL DEL ORO LEAGUE HOME GAMES!
     <br>
     Also, get discounts to dances, yearbooks, and more!

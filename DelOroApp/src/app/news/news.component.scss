@@ -1,16 +1,12 @@
-.example-card {
+.nav-card {
   max-width: 600px;
-  margin:auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin: 50px auto 50px auto;
 
 }
 
-.example-header-image {
-  background-image: url('../../assets/images/do-logo.svg');
-  background-size: cover;
+mat-card-content {
+  padding-top: 10px;
 }
-
 
 h1 {
   text-align: center;

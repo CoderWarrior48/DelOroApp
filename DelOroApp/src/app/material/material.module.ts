@@ -8,9 +8,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
-import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry} from '@angular/material/icon';
-import { HttpClientModule } from "@angular/common/http";
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
@@ -25,7 +22,6 @@ const modules = [
   MatListModule,
   MatSidenavModule,
   MatFormFieldModule,
-  HttpClientModule,
   MatCardModule,
   MatTabsModule,
   MatSnackBarModule,
@@ -37,8 +33,7 @@ const modules = [
   exports: [modules],
 })
 export class MaterialModule {
-  constructor(private matIconRegistry: MatIconRegistry,private domSanitizer: DomSanitizer) {
-  this.matIconRegistry.addSvgIcon("do-logo", this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/images/do-logo.svg"));
+  constructor() {
   }
 }
 

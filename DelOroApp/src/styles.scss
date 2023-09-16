@@ -1,3 +1,40 @@
+@import 'breakpoints';
+
 /* You can add global styles to this file, and also import other style files */
-html, body { height: 100%;}
-body { margin: 0;}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.hide-xs {
+  @include breakpoint('xs') {
+    display: none !important;
+  }
+}
+.hide-gt-xs {
+  @include breakpoint('gt-xs') {
+    display: none !important;
+  }
+}
+.hide-sm {
+  @include breakpoint('sm') {
+    display: none !important;
+  }
+}
+.hide-gt-sm {
+  @include breakpoint('gt-sm') {
+    display: none !important;
+  }
+}
+.hide-lt-md {
+  @include breakpoint('lt-md') {
+    display: none !important;
+  }
+}

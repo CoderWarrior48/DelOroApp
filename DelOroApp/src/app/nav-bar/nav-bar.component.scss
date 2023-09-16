@@ -1,5 +1,9 @@
 mat-sidenav-container {
   height: 100%;
+  
+  .primary {
+    padding: 30px;
+  }
 
   .app-toolbar {
     position: sticky;
@@ -17,7 +21,14 @@ mat-sidenav-container {
       display: flex;
       align-items: center;
     }
-  }
-  
-}
 
+    &.center {
+      text-align: center;
+      justify-content: center;
+    }
+
+    &.spacer {
+      flex: 1 1 auto;
+    }
+  }
+}
