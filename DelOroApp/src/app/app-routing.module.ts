@@ -10,6 +10,7 @@ import { CounselingComponent } from '../../../DelOroApp/src/app/counseling/couns
 import { ContactComponent } from '../../../DelOroApp/src/app/contact/contact.component';
 import { MoreComponent } from '../../../DelOroApp/src/app/more/more.component';
 import { NewsComponent } from '../../../DelOroApp/src/app/news/news.component';
+import { EditComponent } from '../../../DelOroApp/src/app/edit/edit.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -23,6 +24,8 @@ const routes: Routes = [
   { path: 'counseling', component: CounselingComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'more', component: MoreComponent },
+  { path: 'edit', component: EditComponent },
+
 
 
 

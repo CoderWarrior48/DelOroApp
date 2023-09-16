@@ -15,6 +15,7 @@ import { CounselingComponent } from './counseling/counseling.component';
 import { ContactComponent } from './contact/contact.component';
 import { MoreComponent } from './more/more.component';
 import { NewsComponent } from './news/news.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NewsComponent } from './news/news.component';
     ContactComponent,
     MoreComponent,
     NewsComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
