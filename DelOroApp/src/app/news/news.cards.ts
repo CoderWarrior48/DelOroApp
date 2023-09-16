@@ -1,6 +1,7 @@
 export const Cards = [
   {
-    tag: 'academic',
+    liked: false,
+    tags: '#academic',
     title:'Connect with a Peer Mentor',
     subtitle:'Peer Mentors are here to help!',
     avatar:'../../assets/images/do-logo.svg',
@@ -11,7 +12,8 @@ export const Cards = [
     
   },
   {
-    tag: 'academic',
+    liked: false,
+    tags: 'academic',
     title:'Class Remind Text Codes',
     subtitle:'Peer Mentors are here to help!',
     avatar:'../../assets/images/do-logo.svg',
@@ -21,7 +23,8 @@ export const Cards = [
     
   },
   {
-    tag: 'extracurricular',
+    liked: false,
+    tags: 'extracurricular',
     title:'Purchase an ASB Card',
     subtitle:'',
     avatar:'../../assets/images/do-shield.png',
@@ -35,11 +38,12 @@ export const Cards = [
     
   },
   {
-    tag: 'extracurricular',
+    liked: false,
+    tags: 'extracurricular',
     title:'Dances',
     subtitle:'',
     avatar:'../../assets/images/do-logo.png',
-    image: '../../assets/images/do-bgym.png',
+    image: '../../assets/images/do-dances.png',
     content: `Dance Contract
     Students must complete a dance contract in order to attend a school dance. Please click the following link to complete: dance contract
     <br>

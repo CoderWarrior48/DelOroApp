@@ -1,72 +1,37 @@
 <h1>Del Oro News</h1>
+
 <mat-tab-group>
-  <mat-tab label="All">
-    <ng-container *ngFor="let card of cards">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div
-            mat-card-avatar
-            style="background-image: url('{{ card.avatar }}');
+  <!-- Create tabs based of of list (tabs) -->
+  <ng-container *ngFor="let tab of tabs">
+    <mat-tab label="{{tab}}">
+      <!-- Create cards based on list (cards) -->
+      <ng-container *ngFor="let card of cards">
+        <mat-card class="example-card" *ngIf="card.tags.includes(tab.toLowerCase()) || (tab.toLowerCase() == 'all')">
+          <mat-card-header>
+            <div
+              mat-card-avatar
+              style="background-image: url('{{ card.avatar }}');
           background-size: cover;"
-          ></div>
-          <mat-card-title>{{ card.title }}</mat-card-title>
-          <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{ card.image }}" alt="Photo" />
-        <mat-card-content>
-          <p [innerHTML]="card.content"></p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </ng-container>
-  </mat-tab>
-  <mat-tab label="Academic">
-    <ng-container *ngFor="let card of cards">
-      <mat-card class="example-card" *ngIf="card.tag == 'academic'">
-        <mat-card-header>
-          <div
-            mat-card-avatar
-            style="background-image: url('{{ card.avatar }}');
-          background-size: cover;"
-          ></div>
-          <mat-card-title>{{ card.title }}</mat-card-title>
-          <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{ card.image }}" alt="Photo" />
-        <mat-card-content>
-          <p [innerHTML]="card.content"></p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </ng-container>
-  </mat-tab>
-  <mat-tab label="Extracurricular">
-    <ng-container *ngFor="let card of cards">
-      <mat-card class="example-card" *ngIf="card.tag == 'extracurricular'">
-        <mat-card-header>
-          <div
-            mat-card-avatar
-            style="background-image: url('{{ card.avatar }}');
-          background-size: cover;"
-          ></div>
-          <mat-card-title>{{ card.title }}</mat-card-title>
-          <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{ card.image }}" alt="Photo" />
-        <mat-card-content>
-          <p [innerHTML]="card.content"></p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </ng-container>
-  </mat-tab>
+            ></div>
+            <mat-card-title>{{ card.title }}</mat-card-title>
+            <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="{{ card.image }}" alt="Photo" />
+          <mat-card-content>
+            <p [innerHTML]="card.content"></p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" (click)="card.liked = !card.liked"><mat-icon>{{card.liked == true ? "favorite" : "favorite_outline"}}</mat-icon></button>
+            <button
+              mat-button
+              color="primary"
+              (click)="openSnackBar('Shared!', 'close')"
+            >
+              SHARE
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </ng-container>
+    </mat-tab>
+  </ng-container>
 </mat-tab-group>

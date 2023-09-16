@@ -12,6 +12,8 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 import { HttpClientModule } from "@angular/common/http";
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 
@@ -26,6 +28,7 @@ const modules = [
   HttpClientModule,
   MatCardModule,
   MatTabsModule,
+  MatSnackBarModule,
 ];
 
 @NgModule({
