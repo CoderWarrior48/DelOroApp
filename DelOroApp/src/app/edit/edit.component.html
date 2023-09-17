@@ -1,1 +1,27 @@
-<p>edit works!</p>
+<mat-tab-group class="tab-group">
+  <mat-tab label="Edit" class="tab">
+    <mat-drawer-container class="edit-tools-container">
+      <mat-drawer #drawer mode="side" class="edit-tools">
+        <mat-list-item type="button" mat-button>
+          <mat-icon>title</mat-icon> New text
+        </mat-list-item>
+        <mat-list-item type="button" mat-button>
+          <mat-icon>image</mat-icon> New image
+        </mat-list-item>
+        <mat-list-item type="button" mat-button>
+          <mat-icon>list</mat-icon> New list
+        </mat-list-item>
+        <mat-list-item type="button" mat-button>
+          <mat-icon>link</mat-icon> New link
+        </mat-list-item>
+      </mat-drawer>
+      <div class="edit-tools-content">
+        <h1>page</h1>
+        <button type="button" mat-button (click)="drawer.toggle()">
+          Toggle sidenav
+        </button>
+      </div>
+    </mat-drawer-container>
+  </mat-tab>
+  <mat-tab label="Preview" class="tab"> </mat-tab>
+</mat-tab-group>
