@@ -10,9 +10,6 @@
       <a mat-list-item routerLink="/" (click)="sidenav.close()">
         <mat-icon>home</mat-icon>
       </a>
-      <a mat-list-item routerLink="/news">
-        <mat-icon>feed</mat-icon>
-      </a>
 
       <ng-container *ngFor="let item of links">
         <mat-list-item routerLinkActive="selected" [routerLink]="item.path">
@@ -28,6 +25,11 @@
         <mat-icon>menu</mat-icon>
       </button>
     </div>
+
+    <button mat-icon-button routerLink="/news">
+      <mat-icon>feed</mat-icon>
+    </button>
+
     <button
       mat-icon-button
       routerLink="/"
@@ -35,9 +37,7 @@
     >
       <mat-icon>home</mat-icon>Del Oro
     </button>
-    <a mat-list-item routerLink="/news">
-      <mat-icon>feed</mat-icon>
-    </a>
+    
     <button
       mat-icon-button
       routerLink="/"
