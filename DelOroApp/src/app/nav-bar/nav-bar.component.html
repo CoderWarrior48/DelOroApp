@@ -1,12 +1,17 @@
 <!-- Sidebar Navigation method -->
 <mat-sidenav-container>
-  <mat-sidenav #sidenav roll="navigation" (click)="sidenav.toggle()" class="primary">
+  <mat-sidenav
+    #sidenav
+    roll="navigation"
+    (click)="sidenav.toggle()"
+    class="primary"
+  >
     <mat-nav-list>
       <a mat-list-item routerLink="/" (click)="sidenav.close()">
         <mat-icon>home</mat-icon>
       </a>
       <a mat-list-item routerLink="/news">
-        <mat-icon>home</mat-icon>
+        <mat-icon>feed</mat-icon>
       </a>
 
       <ng-container *ngFor="let item of links">
@@ -31,7 +36,7 @@
       <mat-icon>home</mat-icon>Del Oro
     </button>
     <a mat-list-item routerLink="/news">
-      <mat-icon>newsmode</mat-icon>
+      <mat-icon>feed</mat-icon>
     </a>
     <button
       mat-icon-button
