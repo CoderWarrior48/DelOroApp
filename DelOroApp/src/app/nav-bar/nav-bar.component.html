@@ -26,10 +26,6 @@
       </button>
     </div>
 
-    <button mat-icon-button routerLink="/news">
-      <mat-icon>feed</mat-icon>
-    </button>
-
     <button
       mat-icon-button
       routerLink="/"
@@ -53,6 +49,9 @@
       class="hide-lt-md"
     >
       {{ item.name }}
+    </button>
+    <button mat-icon-button routerLink="/news">
+      <mat-icon>feed</mat-icon>
     </button>
     <button mat-raised-button color="accent">Sign In</button>
   </mat-toolbar>
