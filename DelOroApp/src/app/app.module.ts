@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MoreComponent } from './more/more.component';
 import { NewsComponent } from './news/news.component';
 import { EditComponent } from './edit/edit.component';
+import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { EditComponent } from './edit/edit.component';
     MoreComponent,
     NewsComponent,
     EditComponent,
+    NewsfeedComponent,
   ],
   imports: [
     BrowserModule,

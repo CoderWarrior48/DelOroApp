@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import  { Cards }  from './news.cards';
+import  { Cards }  from './newsfeed.cards';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class NewsService {
+export class NewsfeedService {
   cards = Cards
 
-  constructor() {}
+
+  constructor() { }
 }

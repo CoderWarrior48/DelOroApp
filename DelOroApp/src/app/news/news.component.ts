@@ -1,5 +1,5 @@
 import { Component, ContentChild } from '@angular/core';
-import { NewsService} from './news.service';
+import { NewsfeedComponent} from '../newsfeed/newsfeed.component';
 import {MatSnackBar} from '@angular/material/snack-bar'
 
 
@@ -11,28 +11,10 @@ import {MatSnackBar} from '@angular/material/snack-bar'
 })
 export class NewsComponent {
 
-  cards: {
-    liked: boolean,
-    tags: string,
-    title: string, 
-    subtitle: string, 
-    avatar: string,
-    image: string,
-    content: string,
-  }[];
 
   tabs = [
     "All",
     "Academic",
     "Extracurricular",
   ]
-
-  constructor (private _newsService: NewsService, private _snackBar: MatSnackBar) {
-    this.cards = _newsService.cards;
-
-  }
-
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
-  }
 }
