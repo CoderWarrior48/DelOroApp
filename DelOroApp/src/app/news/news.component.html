@@ -23,7 +23,7 @@
           </mat-card-header>
           <img mat-card-image src="{{ card.image }}" alt="Photo" />
           <mat-card-content>
-            <p [innerHTML]="card.content"></p>
+            <p [innerHTML]="card.content.split('\n').join('<br />')"></p>
           </mat-card-content>
           <mat-card-actions>
             <button mat-button color="primary" (click)="card.liked = !card.liked"><mat-icon>{{card.liked == true ? "favorite" : "favorite_outline"}}</mat-icon></button>
