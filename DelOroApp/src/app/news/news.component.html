@@ -3,7 +3,7 @@
 <mat-tab-group>
   <!-- Create tabs based of of list (tabs) -->
   <ng-container *ngFor="let tab of tabs">
-    <mat-tab label="{{tab}}">
+    <mat-tab label="{{tab}}" color="accent">
       <!-- Create newsfeed from component -->
       <app-newsfeed [tab]="tab" class="newsfeed" ></app-newsfeed>
     </mat-tab>
