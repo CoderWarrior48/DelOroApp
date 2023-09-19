@@ -30,4 +30,12 @@
   z-index: 1000;
 }
 
-
+.newsfeed {
+  width: 300px;
+  float: right;
+  margin-top: 0px;
+  padding: 30px;
+  height: 500px;
+  overflow: scroll;
+  background-color: gray;
+}
