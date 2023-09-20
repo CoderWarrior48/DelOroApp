@@ -6,16 +6,32 @@
       <mat-slide-toggle 
       ngModel name="darkmode" 
       #darkmode="ngModel"
+      [(ngModel)]="settingsObj['darkmode']"
       >Dark Mode</mat-slide-toggle>
 
       <mat-slide-toggle 
       ngModel name="notifications" 
       #notifications="ngModel"
-      >notifications</mat-slide-toggle>
+      [(ngModel)] = "settingsObj['notifications']"
+      >Notifications</mat-slide-toggle>
+
+      <mat-divider></mat-divider>
+
+      <mat-slide-toggle 
+      ngModel name="subscribe" 
+      #darkmode="ngModel"
+      [(ngModel)] = "settingsObj['suscribe']"
+      >Subscribe</mat-slide-toggle>
+
+      <mat-slide-toggle 
+      ngModel name="other" 
+      #notifications="ngModel"
+      [(ngModel)] = "settingsObj['other']"
+      >other</mat-slide-toggle>
+
     
       <button mat-raised-button type="submit">Save Settings</button>
     </form>
-    <h1>{{darkmode.value}}</h1>
     <p>{{stringify(settingsObj)}}</p>
   </mat-card-content>
 </mat-card>

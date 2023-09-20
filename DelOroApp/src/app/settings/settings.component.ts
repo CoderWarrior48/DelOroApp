@@ -12,11 +12,15 @@ export class SettingsComponent {
   settingsObj = {
     darkmode: true,
     notifications: true,
+    suscribe: true,
+    other: false,
   }
 
   onSubmit(myForm: NgForm) {
   
-    this.settingsObj.darkmode = myForm.value[0]
+    this.settingsObj.darkmode = (myForm.value['darkmode'] == true) ? true : false
+    this.settingsObj.notifications = (myForm.value['notifications']) ? true : false
+
 
   }
   stringify(obj: object) {
