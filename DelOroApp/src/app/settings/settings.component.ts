@@ -12,35 +12,29 @@ export class SettingsComponent {
   settingsObj = {
     darkmode: true,
     notifications: true,
-    suscribe: true,
+    subscribe: true,
     other: false,
   }
 
   onSubmit(myForm: NgForm) {
   
-    this.settingsObj.darkmode = (myForm.value['darkmode'] == true) ? true : false
-    this.settingsObj.notifications = (myForm.value['notifications']) ? true : false
-
-
+    this.settingsObj.darkmode = myForm.value['darkmode']
+    this.settingsObj.notifications = myForm.value['notifications']
+    this.settingsObj.subscribe = myForm.value['subscribe']
+    this.settingsObj.other = myForm.value['other']
+    this.toggleDarkTheme(this.settingsObj.darkmode)
   }
   stringify(obj: object) {
     return JSON.stringify(obj)
   }
 
-  isDark = true;
-
-  static readonly darkStyleName = 'darkMode';
-    
-  public toggleDarkTheme() {
-    if (this.isDark) {
-      document.body.classList.remove('darkMode'); // Remove darkMode
-      document.body.classList.add('lightMode'); // add lightMode
-
-      this.isDark = false;
-    } else {
+  toggleDarkTheme(isDark: boolean) {
+    if (isDark) {
       document.body.classList.remove('lightMode'); // Remove lightMode
       document.body.classList.add('darkMode'); // add darkMode
-      this.isDark = true;
+    } else {
+      document.body.classList.remove('darkMode'); // Remove darkMode
+      document.body.classList.add('lightMode'); // add lightMode
     }
   }
   

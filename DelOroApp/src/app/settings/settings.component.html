@@ -1,7 +1,7 @@
 <h1> Settings </h1>
 <mat-card>
   <mat-card-content>
-    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
 
       <mat-slide-toggle 
       ngModel name="darkmode" 
@@ -20,7 +20,7 @@
       <mat-slide-toggle 
       ngModel name="subscribe" 
       #darkmode="ngModel"
-      [(ngModel)] = "settingsObj['suscribe']"
+      [(ngModel)] = "settingsObj['subscribe']"
       >Subscribe</mat-slide-toggle>
 
       <mat-slide-toggle 
@@ -33,7 +33,6 @@
       <button mat-raised-button type="submit">Save Settings</button>
     </form>
 
-    <button mat-button (click)="toggleDarkTheme()">ToggleDarkTheme</button>
     <p>{{stringify(settingsObj)}}</p>
   </mat-card-content>
 </mat-card>
