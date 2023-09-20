@@ -1,0 +1,23 @@
+<h1> Settings </h1>
+<mat-card>
+  <mat-card-content>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+
+      <mat-slide-toggle 
+      ngModel name="darkmode" 
+      #darkmode="ngModel"
+      >Dark Mode</mat-slide-toggle>
+
+      <mat-slide-toggle 
+      ngModel name="notifications" 
+      #notifications="ngModel"
+      >notifications</mat-slide-toggle>
+    
+      <button mat-raised-button type="submit">Save Settings</button>
+    </form>
+    <h1>{{darkmode.value}}</h1>
+    <p>{{stringify(settingsObj)}}</p>
+  </mat-card-content>
+</mat-card>
+  
+   

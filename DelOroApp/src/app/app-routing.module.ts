@@ -11,6 +11,7 @@ import { ContactComponent } from '../../../DelOroApp/src/app/contact/contact.com
 import { MoreComponent } from '../../../DelOroApp/src/app/more/more.component';
 import { NewsComponent } from '../../../DelOroApp/src/app/news/news.component';
 import { EditComponent } from '../../../DelOroApp/src/app/edit/edit.component';
+import { SettingsComponent } from '../../../DelOroApp/src/app/settings/settings.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -25,6 +26,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'more', component: MoreComponent },
   { path: 'edit', component: EditComponent },
+  { path: 'settings', component: SettingsComponent },
+
 
 
 

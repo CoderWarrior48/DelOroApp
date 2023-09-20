@@ -53,10 +53,13 @@
     >
       {{ item.name }}
     </button>
+    <button mat-raised-button color="accent">Sign In</button>
     <button mat-icon-button routerLink="/news">
       <mat-icon>feed</mat-icon>
     </button>
-    <button mat-raised-button color="accent">Sign In</button>
+    <button mat-icon-button routerLink="/settings">
+      <mat-icon>settings</mat-icon>
+    </button>
   </mat-toolbar>
   <ng-content></ng-content>
 </mat-sidenav-container>

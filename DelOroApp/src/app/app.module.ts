@@ -17,6 +17,9 @@ import { MoreComponent } from './more/more.component';
 import { NewsComponent } from './news/news.component';
 import { EditComponent } from './edit/edit.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
+import { SettingsComponent } from './settings/settings.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -34,11 +37,13 @@ import { NewsfeedComponent } from './newsfeed/newsfeed.component';
     NewsComponent,
     EditComponent,
     NewsfeedComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
