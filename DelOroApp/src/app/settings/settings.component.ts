@@ -26,6 +26,22 @@ export class SettingsComponent {
   stringify(obj: object) {
     return JSON.stringify(obj)
   }
+
+  isDark = true;
+
+  static readonly darkStyleName = 'darkMode';
     
+  public toggleDarkTheme() {
+    if (this.isDark) {
+      document.body.classList.remove('darkMode'); // Remove darkMode
+      document.body.classList.add('lightMode'); // add lightMode
+
+      this.isDark = false;
+    } else {
+      document.body.classList.remove('lightMode'); // Remove lightMode
+      document.body.classList.add('darkMode'); // add darkMode
+      this.isDark = true;
+    }
+  }
   
 }

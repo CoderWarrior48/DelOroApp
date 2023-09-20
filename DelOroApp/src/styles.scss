@@ -84,7 +84,18 @@ $my-warn: mat.define-palette(mat.$red-palette);
 
 
 
-$my-theme: mat.define-dark-theme((
+$dark-theme: mat.define-dark-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+$light-theme: mat.define-light-theme((
  color: (
    primary: $my-primary,
    accent: $my-accent,
@@ -97,4 +108,11 @@ $my-theme: mat.define-dark-theme((
 
 
 
-@include mat.all-component-themes($my-theme);
+// @include mat.all-component-themes($dark-theme);
+
+.darkMode {
+  @include mat.all-component-colors($dark-theme);
+}
+.lightMode {
+  @include mat.all-component-colors($light-theme);
+}
