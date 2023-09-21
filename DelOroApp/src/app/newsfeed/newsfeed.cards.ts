@@ -27,7 +27,7 @@ export const Cards = [
     tags: 'extracurricular',
     title:'Purchase an ASB Card',
     subtitle:'',
-    avatar:'../../assets/images/do-shield.png',
+    avatar:'../../assets/images/do-eagle-shield.png',
     image: '../../assets/images/do-stadium.png',
     content: `GET FREE ENTRANCE INTO ALL DEL ORO LEAGUE HOME GAMES!
     <br>
