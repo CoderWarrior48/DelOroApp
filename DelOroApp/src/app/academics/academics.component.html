@@ -1,1 +1,11 @@
 <p>academics works!</p>
+<ng-container *ngFor="let department of departments">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{department.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <img src="{{department.image}}"> 
+    </mat-card-content>
+  </mat-card>
+</ng-container>
