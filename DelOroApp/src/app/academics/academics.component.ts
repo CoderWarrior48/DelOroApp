@@ -9,12 +9,40 @@ export class AcademicsComponent {
 
   departments = [
     {
-      name: 'Math',
+      name: 'CTE',
       image: '../../assets/images/do-eagle-shield.png'
     },
     {
-      name: 'Science',
+      name: 'English',
       image: '../../assets/images/do-logo.svg'
-    }
+    },
+    {
+      name: 'Fine Arts',
+      image: '../../assets/images/do-logo.svg'
+    },
+    {
+      name: 'Math',
+      image: '../../assets/images/do-logo.svg'
+    },
+    {
+      name: 'PE',
+      image: '../../assets/images/do-logo.svg'
+    },
+    {
+      name: 'People Services',
+      image: '../../assets/images/do-logo.svg'
+    },
+    {
+      name: 'Social Science',
+      image: '../../assets/images/do-logo.svg'
+    },
+    {
+      name: 'World Languages',
+      image: '../../assets/images/do-logo.svg'
+    },
+    {
+      name: 'Learning Commons',
+      image: '../../assets/images/do-logo.svg'
+    },
   ]
 }
