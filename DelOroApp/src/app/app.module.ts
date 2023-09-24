@@ -19,6 +19,8 @@ import { EditComponent } from './edit/edit.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { SettingsComponent } from './settings/settings.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 @NgModule({
@@ -38,12 +40,14 @@ import { FormsModule } from '@angular/forms';
     EditComponent,
     NewsfeedComponent,
     SettingsComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
