@@ -7,9 +7,9 @@ import { AccountService } from '../account.service';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent {
-  
-  s: AccountService
+
+  s: object
   constructor (_accountService : AccountService){
-    this.s = _accountService
+    this.s = _accountService.getAllCats()
   }
 }
