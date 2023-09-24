@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 
 // route for handling requests from the Angular client
 app.get('/api/message', (req, res) => {
-  res.json({ message: 'Yo! It works! Deos it update tho' });
+  res.json({ message: 'Yo! It works!' });
 });
 
 app.listen(3000, () => {
