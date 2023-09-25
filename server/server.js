@@ -1,21 +1,33 @@
-const express = require('express');
+const express = require('express')
 const bodyParser = require('body-parser');
-// create express app
+const cors = require('cors');
+
 const app = express();
-// Setup server port
-const port = process.env.PORT || 3000;
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }))
-// parse requests of content-type - application/json
-app.use(bodyParser.json())
-// define a root/default route
-app.get('/', (req, res) => {
-  res.json({"message": "Hello World"});
+const port = 3000;
+
+// Where we will keep books
+let books = [
+  {"book1":"harrypotter"}
+];
+
+app.use(cors());
+
+// Configuring body parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.post('/book', (req, res) => {
+  const book = req.body;
+
+  // Output the book to the console for debugging
+  console.log(book);
+  books.push(book);
+
+  res.send('Book is added to the database');
 });
-app.get('/accounts', (req, res) => {
-  res.json({"codewarrior": "password1234"});
+
+app.get('/books', (req, res) => {
+  res.json(books);
 });
-// listen for requests
-app.listen(port, () => {
-  console.log(`Node server is listening on port ${port}`);
-});
+
+app.listen(port, () => console.log(`Hello world app listening on port ${port}!`));
