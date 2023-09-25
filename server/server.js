@@ -8,7 +8,10 @@ const port = 3000;
 // Where we will keep books
 let accounts = [
   {
-    user:"diego"
+    html:`
+    <h1>H1 Heading</h1>
+    <p>p text</p>
+    `
   },
   {
     user:"dawson"
