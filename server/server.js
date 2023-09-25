@@ -38,4 +38,4 @@ app.get('/', (req, res) => {
   res.json(accounts);
 });
 
-app.listen(port, () => console.log(`Hello world app listening on port ${port}!`));
+app.listen(port, () => console.log(`DelOroApp server listening on port ${port}`));
