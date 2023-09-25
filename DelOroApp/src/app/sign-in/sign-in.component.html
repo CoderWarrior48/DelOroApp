@@ -8,6 +8,6 @@
 <h5>
 	The below message is fetched from the express backend
 </h5>
-<p *ngIf="message">
-	{{ message.message }}
+<p *ngFor="let account of accounts">
+	{{ account.user }}
 </p>

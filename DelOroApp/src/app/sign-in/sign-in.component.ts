@@ -10,11 +10,11 @@ import { ApiService } from '../api.service';
 })
 export class SignInComponent {
   title = 'frontEnd';
-  message: any;
+  accounts: any;
   constructor(private apiService: ApiService) { };
   ngOnInit() {
       this.apiService.getMessage().subscribe(data => {
-          this.message = data;
+          this.accounts = data;
       });
   }
 }

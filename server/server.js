@@ -6,8 +6,16 @@ const app = express();
 const port = 3000;
 
 // Where we will keep books
-let books = [
-  {"book1":"harrypotter"}
+let accounts = [
+  {
+    user:"diego"
+  },
+  {
+    user:"dawson"
+  },
+  {
+    user: "DH"
+  }
 ];
 
 app.use(cors());
@@ -20,14 +28,14 @@ app.post('/book', (req, res) => {
   const book = req.body;
 
   // Output the book to the console for debugging
-  console.log(book);
-  books.push(book);
+  console.log(accounts);
+  books.push(accounts);
 
   res.send('Book is added to the database');
 });
 
-app.get('/books', (req, res) => {
-  res.json(books);
+app.get('/', (req, res) => {
+  res.json(accounts);
 });
 
 app.listen(port, () => console.log(`Hello world app listening on port ${port}!`));
