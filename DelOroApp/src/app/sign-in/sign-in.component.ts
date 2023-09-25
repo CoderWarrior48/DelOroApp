@@ -9,12 +9,11 @@ import { ApiService } from '../api.service';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent {
-  title = 'frontEnd';
-  accounts: any;
+  pages: any;
   constructor(private apiService: ApiService) { };
   ngOnInit() {
       this.apiService.getMessage().subscribe(data => {
-          this.accounts = data;
+          this.pages = data;
       });
   }
 }
