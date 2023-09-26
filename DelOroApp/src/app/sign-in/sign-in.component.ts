@@ -9,11 +9,11 @@ import { Observable, take } from 'rxjs';
 })
 export class SignInComponent {
 
-  contents$: Observable<any> = new Observable<any>;
+  accounts$: Observable<any> = new Observable<any>;
 
   constructor(public apiService: ApiService) {}
 
   ngOnInit() {
-    this.contents$ = this.apiService.getMessage('/about').pipe(take(1))
+    this.accounts$ = this.apiService.getMessage('/accounts').pipe(take(1))
   }
 }

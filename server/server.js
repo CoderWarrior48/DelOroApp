@@ -54,17 +54,12 @@ data = [
        Subscribe to Weekly Progress Emails that contain up to date student attendance and gradebook information. Click here for directions.`
       },
       {
-        header: 'Aeries Parent Portal Online Gradebook', 
-        content: `The Parent Portal is an online service that will allow students and parents to view grades, assignments, and attendance.  
-        Click here to access portal: Aeries Parent Portal.
+        header: 'Canvas Parent Observer Account', 
+        content: `Canvas is an online platform many teachers use to host class materials, activities and grade information. If you would like access to your student's Canvas account as a Parent Observer, click here for set-up information. 
+
+        If you already have a Parent Observer account, you can log in from this link.
         
-        If you don't have an active portal account, look for an email the beginning of August to get started. 
-        
-        If you don't receive an email or for assistance in logging in, email or call Torri Baggaley: tbaggaley@puhsd.k12.ca.us at Del Oro (916) 652-7243 ext. 1012 
-        
-        Check out this video that will show you how to use the Portal to complete the Data Confirmation Process
-        
-        Subscribe to Weekly Progress Emails that contain up to date student attendance and gradebook information. Click here for directions.`
+        If you have questions about how your student's teacher is using Canvas, please email the teacher.`
        },
       ]
    }

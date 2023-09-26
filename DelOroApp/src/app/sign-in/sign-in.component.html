@@ -1,4 +1,4 @@
-<ng-container *ngIf="{ content: contents$ | async } as data">
+<ng-container *ngIf="{ content: accounts$ | async } as data">
   <ng-container *ngIf="data.content">
     <h1>{{ data.content.headerText }}</h1>
 		<h2>Pages</h2>
