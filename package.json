@@ -3,6 +3,6 @@
     "@angular/cli": "^16.2.2"
   },
   "scripts": {
-    "start": "cd server && npm install && npx nodemon server & cd DelOroApp && npm install && npm start"
+    "start": "npm start --prefix server & npm --prefix DelOroApp"
   }
 }
