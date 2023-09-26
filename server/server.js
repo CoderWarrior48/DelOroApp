@@ -17,15 +17,15 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/book', (req, res) => {
-  const book = req.body;
+// app.post('/book', (req, res) => {
+//   const book = req.body;
 
-  // Output the book to the console for debugging
-  console.log(pages);
-  books.push(pages);
+//   // Output the book to the console for debugging
+//   console.log(pages);
+//   books.push(pages);
 
-  res.send('Book is added to the database');
-});
+//   res.send('Book is added to the database');
+// });
 
 app.get('/', (req, res) => {
   res.json(pages);
