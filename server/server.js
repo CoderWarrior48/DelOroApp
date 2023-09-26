@@ -53,6 +53,19 @@ data = [
        
        Subscribe to Weekly Progress Emails that contain up to date student attendance and gradebook information. Click here for directions.`
       },
+      {
+        header: 'Aeries Parent Portal Online Gradebook', 
+        content: `The Parent Portal is an online service that will allow students and parents to view grades, assignments, and attendance.  
+        Click here to access portal: Aeries Parent Portal.
+        
+        If you don't have an active portal account, look for an email the beginning of August to get started. 
+        
+        If you don't receive an email or for assistance in logging in, email or call Torri Baggaley: tbaggaley@puhsd.k12.ca.us at Del Oro (916) 652-7243 ext. 1012 
+        
+        Check out this video that will show you how to use the Portal to complete the Data Confirmation Process
+        
+        Subscribe to Weekly Progress Emails that contain up to date student attendance and gradebook information. Click here for directions.`
+       },
       ]
    }
    },
