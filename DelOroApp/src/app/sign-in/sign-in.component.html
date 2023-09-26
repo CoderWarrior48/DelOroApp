@@ -1,8 +1,8 @@
 <ng-container *ngIf="{ content: accounts$ | async } as data">
-  <ng-container *ngIf="data.content">
-    <h1>{{ data.content.headerText }}</h1>
-		<h2>Pages</h2>
-		<div *ngFor="let page of data.content.paragraphs">{{ page }}</div>
-  </ng-container>
+  <mat-form-field class="example-form-field">
+    <input matInput type="email">
+    <input matInput type="password">
+    <button mat-button type="submit">Sign in</button>
+  </mat-form-field>
   <!-- {{ data | json }} -->
 </ng-container>

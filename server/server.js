@@ -5,7 +5,6 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -22,27 +21,27 @@ app.use(bodyParser.json());
 
 data = [
   {
-   path: '/',
-   content: {
-    headerText: 'H1 Heading',
-    paragraphs: [' p text 1 ', ' p text 2 '],
-  }
+    path: '/',
+    content: {
+      headerText: 'H1 Heading',
+      paragraphs: [' p text 1 ', ' p text 2 '],
+    },
   },
   {
     path: '/about',
     content: {
-     headerText: 'About',
-     paragraphs: [' This is the about page: ', ' 123823651023 '],
-   }
-   },
-   {
+      headerText: 'About',
+      paragraphs: [' This is the about page: ', ' 123823651023 '],
+    },
+  },
+  {
     path: '/resources',
     content: {
-     headerText: 'Resources',
-     cards: [
-       {
-       header: 'Aeries Parent Portal Online Gradebook', 
-       content: `The Parent Portal is an online service that will allow students and parents to view grades, assignments, and attendance.  
+      headerText: 'Resources',
+      cards: [
+        {
+          header: 'Aeries Parent Portal Online Gradebook',
+          content: `The Parent Portal is an online service that will allow students and parents to view grades, assignments, and attendance.  
        Click here to access portal: Aeries Parent Portal.
        
        If you don't have an active portal account, look for an email the beginning of August to get started. 
@@ -51,29 +50,37 @@ data = [
        
        Check out this video that will show you how to use the Portal to complete the Data Confirmation Process
        
-       Subscribe to Weekly Progress Emails that contain up to date student attendance and gradebook information. Click here for directions.`
-      },
-      {
-        header: 'Canvas Parent Observer Account', 
-        content: `Canvas is an online platform many teachers use to host class materials, activities and grade information. If you would like access to your student's Canvas account as a Parent Observer, click here for set-up information. 
-
+       Subscribe to Weekly Progress Emails that contain up to date student attendance and gradebook information. Click here for directions.`,
+        },
+        {
+          header: 'Canvas Parent Observer Account',
+          content: `Canvas is an online platform many teachers use to host class materials, activities and grade information. If you would like access to your student's Canvas account as a Parent Observer, click here for set-up information. 
+      
         If you already have a Parent Observer account, you can log in from this link.
         
         If you have questions about how your student's teacher is using Canvas, please email the teacher.`
-       },
+        },
+      ],
+    },
+  },
+  {
+    path: '/accounts',
+    content: {
+      accounts: [
+      {user: 'diego', password: '1234'},
+      {user: 'dh', password: '6789'}
       ]
-   }
-   },
-]
+    }
+  }
+];
 
-data.map(getRequest)
+data.map(getRequest);
 
 function getRequest(info) {
   app.get(info.path, (req, res) => {
     res.json(info.content);
   });
 }
-
 
 app.listen(port, () =>
   console.log(`DelOroApp server listening on port ${port}`)
