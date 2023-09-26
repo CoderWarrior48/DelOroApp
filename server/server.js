@@ -11,11 +11,7 @@ let pages = [
     html:`
 
     <h1>H1 Heading</h1>
-    <mat-card>
-      <mat-card-content>
         <p> p text </p>
-      </mat-card-content>
-    </mat-card>
     `
   },
   {
