@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -6,21 +6,10 @@ const app = express();
 const port = 3000;
 
 // Where we will keep books
-let pages = [
-  {
-    html:`
-
-    <h1>H1 Heading</h1>
-        <p> p text </p>
-    `
-  },
-  {
-    html:"dawson"
-  },
-  {
-    html: "DH"
-  }
-];
+let pages = {
+  headerText: 'H1 Heading',
+  paragraphs: [' p text 1 ', ' p text 2 '],
+};
 
 app.use(cors());
 
@@ -42,4 +31,6 @@ app.get('/', (req, res) => {
   res.json(pages);
 });
 
-app.listen(port, () => console.log(`DelOroApp server listening on port ${port}`));
+app.listen(port, () =>
+  console.log(`DelOroApp server listening on port ${port}`)
+);

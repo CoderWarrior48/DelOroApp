@@ -1,5 +1,10 @@
-<ng-container *ngFor="let page of pages">
-	<div [innerHTML]="page.html"></div>
+<ng-container *ngIf="{ message: messages$ | async } as data">
+  <ng-container *ngIf="data.message">
+    <h1>{{ data.message.headerText }}</h1>
+		<h2>Pages</h2>
+		<div *ngFor="let page of data.message.paragraphs">{{ page }}</div>
+  </ng-container>
+  <!-- {{ data | json }} -->
 </ng-container>
 
 <button mat-button (click)="apiService.postMessage()">POST</button>

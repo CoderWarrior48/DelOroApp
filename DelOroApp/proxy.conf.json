@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://stackblitzstarterssxdhgr-mopf--3000--d6c42aca.local-credentialless.webcontainer.io/",
+    "secure": false
+  }
+}
