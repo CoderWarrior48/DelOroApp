@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Observable, pipe, take } from 'rxjs';
+import { Observable, take } from 'rxjs';
 
 @Component({
   selector: 'app-sign-in',
@@ -8,12 +8,12 @@ import { Observable, pipe, take } from 'rxjs';
   styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent {
-  pages: any;
-  messages$: Observable<any> = new Observable<any>;
+
+  contents$: Observable<any> = new Observable<any>;
+
   constructor(public apiService: ApiService) {}
+
   ngOnInit() {
-    this.messages$ = this.apiService.getMessage().pipe(
-      take(1)
-    ) //.subscribe(data => { this.pages = data;});
+    this.contents$ = this.apiService.getMessage('/about').pipe(take(1))
   }
 }
