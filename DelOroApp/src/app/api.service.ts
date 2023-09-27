@@ -18,6 +18,6 @@ export class ApiService {
 
   //testing....
   postDataToServer(): Observable<any[]> {
-    return this.http.get<any[]>(`http://localhost:3000/accounts`).pipe(map(expenses => {return expenses}));
+    return this.http.post<any[]>(`http://localhost:3000/accounts`).pipe(map(expenses => {return expenses}));
   }
 }
