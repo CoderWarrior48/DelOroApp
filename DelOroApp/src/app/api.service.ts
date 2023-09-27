@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-  getMessage(route: any) {
+  getDataFromServer(route: any) {
     return this.http.get(`http://localhost:3000${route}`);
   }
 }

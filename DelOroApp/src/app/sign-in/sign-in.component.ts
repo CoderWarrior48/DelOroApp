@@ -10,10 +10,19 @@ import { Observable, take } from 'rxjs';
 export class SignInComponent {
 
   accounts$: Observable<any> = new Observable<any>;
+  usernameInput: string
+  passwordInput: string
+  
 
-  constructor(public apiService: ApiService) {}
+  constructor(public apiService: ApiService) {
+   this.usernameInput = ''
+   this.passwordInput = ''
+  }
+  signIn() {
+    // if (this.usernameInput in )
+  }
 
   ngOnInit() {
-    this.accounts$ = this.apiService.getMessage('/accounts').pipe(take(1))
+    this.accounts$ = this.apiService.getDataFromServer('/accounts').pipe(take(1))
   }
 }

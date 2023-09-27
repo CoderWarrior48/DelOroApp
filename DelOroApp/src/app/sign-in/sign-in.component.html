@@ -1,8 +1,12 @@
 <ng-container *ngIf="{ content: accounts$ | async } as data">
   <mat-form-field class="example-form-field">
-    <input matInput type="email">
-    <input matInput type="password">
-    <button mat-button type="submit">Sign in</button>
+    <input matInput type="email" [(ngModel)]="usernameInput" value="username">
+    <input matInput type="password" [(ngModel)]="passwordInput" value="password">
+    <button mat-button type="signIn()">Sign in</button>
   </mat-form-field>
+  <h1>User: {{usernameInput}}</h1>
+  <h1>Pasword: {{passwordInput}}</h1>
+
   <!-- {{ data | json }} -->
+  {{accounts$ | json}}
 </ng-container>
