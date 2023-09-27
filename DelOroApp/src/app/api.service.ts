@@ -9,15 +9,15 @@ import { map } from "rxjs/operators";
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-  getDataFromServer(route: any) {
+  getDataFromServer(route: string) {
     return this.http.get(`http://localhost:3000${route}`);
   }
-  // postDataToServer() {
-  //   return this.http.post(`http://localhost:3000/accounts`,{username: 'diego', password: '3412'});
-  // }
+  postDataToServer(route: string) {
+    return this.http.post(`http://localhost:3000${route}`,{username: 'diego', password: '3412'});
+  }
 
   //testing....
-  postDataToServer(): Observable<any[]> {
-    return this.http.post<any[]>(`http://localhost:3000/accounts`).pipe(map(expenses => {return expenses}));
-  }
+  // postDataToServer(): Observable<any[]> {
+  //   return this.http.post<any[]>(`http://localhost:3000/accounts`).pipe(map(expenses => {return expenses}));
+  // }
 }

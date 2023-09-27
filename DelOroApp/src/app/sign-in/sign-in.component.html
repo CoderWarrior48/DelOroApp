@@ -1,4 +1,9 @@
-<!-- <ng-container *ngIf="{ content: accounts$ | async } as data"> -->
+<ng-container *ngIf="{ content: contents$ | async } as data">
+  <ng-container *ngIf="data.content">
+    Data:{{data | json}}
+  </ng-container>
+</ng-container>
+
   <!-- <mat-form-field>
     <input matInput type="email" [(ngModel)]="usernameInput" value="username">
     <input matInput type="password" [(ngModel)]="passwordInput" value="password"> -->
@@ -9,6 +14,5 @@
   <h1>Pasword: {{passwordInput}}</h1> -->
 
   <!-- {{ data | json }} -->
-  <!-- {{accounts$ | json}}
+  <!-- {{accounts$ | json}} -->
 
-</ng-container> -->

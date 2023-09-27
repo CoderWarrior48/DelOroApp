@@ -9,7 +9,8 @@ import { Observable, take } from 'rxjs';
 })
 export class SignInComponent {
 
-  postReturn$: any// Observable<any> = new Observable<any>;
+  contents$: Observable<any> = new Observable<any>;
+
   usernameInput: string
   passwordInput: string
   
@@ -20,8 +21,7 @@ export class SignInComponent {
   }
   signIn() {
     console.log('posting...')
-    this.postReturn$ = this.apiService.postDataToServer().subscribe()//.pipe(take(1))
-    console.log(this.postReturn$)
+    this.contents$ = this.apiService.postDataToServer('/accounts').pipe(take(1))
   }
 
   // ngOnInit() {
