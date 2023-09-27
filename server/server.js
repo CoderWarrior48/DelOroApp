@@ -63,15 +63,15 @@ data = [
       ],
     },
   },
-  {
-    path: '/accounts',
-    content: {
-      accounts: [
-      {user: 'diego', password: '1234'},
-      {user: 'dh', password: '6789'}
-      ]
-    }
-  }
+  // {
+  //   path: '/accounts',
+  //   content: {
+  //     accounts: [
+  //     {user: 'diego', password: '1234'},
+  //     {user: 'dh', password: '6789'}
+  //     ]
+  //   }
+  // }
 ];
 
 
