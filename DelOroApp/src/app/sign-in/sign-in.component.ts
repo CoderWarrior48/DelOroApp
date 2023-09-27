@@ -19,7 +19,7 @@ export class SignInComponent {
    this.passwordInput = ''
   }
   signIn() {
-    // if (this.usernameInput in )
+    this.apiService.postDataToServer()
   }
 
   ngOnInit() {

@@ -14,6 +14,6 @@ export class ResourcesComponent {
   constructor(public apiService: ApiService) {}
 
   ngOnInit() {
-    this.contents$ = this.apiService.getMessage('/resources').pipe(take(1))
+    this.contents$ = this.apiService.getDataFromServer('/resources').pipe(take(1))
   }
 }

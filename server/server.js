@@ -74,6 +74,11 @@ data = [
   }
 ];
 
+
+accounts = [
+  {username:"dh", password:"1234"},
+]
+
 data.map(getRequest);
 
 function getRequest(info) {
@@ -81,6 +86,13 @@ function getRequest(info) {
     res.json(info.content);
   });
 }
+
+  app.post('/accounts', (req, res) => {
+    console.log('receiving data ...');
+    console.log('body is ',req.body);
+    res.send(req.body);
+  });
+
 
 app.listen(port, () =>
   console.log(`DelOroApp server listening on port ${port}`)

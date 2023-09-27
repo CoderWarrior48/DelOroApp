@@ -15,6 +15,6 @@ export class ActivitiesComponent {
   constructor(public apiService: ApiService) {}
 
   ngOnInit() {
-    this.contents$ = this.apiService.getMessage('/activities').pipe(take(1))
+    this.contents$ = this.apiService.getDataFromServer('/activities').pipe(take(1))
   }
 }
