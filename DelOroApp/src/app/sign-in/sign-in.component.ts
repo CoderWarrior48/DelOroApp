@@ -11,17 +11,14 @@ export class SignInComponent {
 
   contents$: Observable<any> = new Observable<any>;
 
-  usernameInput: string
-  passwordInput: string
+  accountInput = {username:'', password:'' }
   
 
   constructor(public apiService: ApiService) {
-   this.usernameInput = ''
-   this.passwordInput = ''
   }
   signIn() {
     console.log('posting...')
-    this.contents$ = this.apiService.postDataToServer('/accounts').pipe(take(1))
+    this.contents$ = this.apiService.postDataToServer('/accounts',this.accountInput).pipe(take(1))
   }
 
   // ngOnInit() {

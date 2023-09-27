@@ -71,7 +71,7 @@ data = [
     type: 'post',
     content: {
       accounts: [
-      {user: 'diego', password: '1234'},
+      {user: 'diego', password: '1238'},
       {user: 'dh', password: '6789'}
       ]
     }

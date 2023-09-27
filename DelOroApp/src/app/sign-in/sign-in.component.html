@@ -1,17 +1,22 @@
 <ng-container *ngIf="{ content: contents$ | async } as data">
   <ng-container *ngIf="data.content">
-    Data:{{data | json}}
+  <ng-container *ngFor="let user of data.content"> 
+    <mat-card>
+    Username: {{user.username}}
+    Password: {{user.password}}
+    </mat-card>
+  </ng-container>
   </ng-container>
 </ng-container>
 
-  <!-- <mat-form-field>
-    <input matInput type="email" [(ngModel)]="usernameInput" value="username">
-    <input matInput type="password" [(ngModel)]="passwordInput" value="password"> -->
+  <mat-form-field>
+    <input matInput type="email" required [(ngModel)]="accountInput.username" value="username">
+    <input matInput type="password" required [(ngModel)]="accountInput.password" value="password">
     <button mat-button (click)="signIn()">Sign in</button>
     <!-- {{postReturn | json}} -->
-  <!-- </mat-form-field>
-  <h1>User: {{usernameInput}}</h1>
-  <h1>Pasword: {{passwordInput}}</h1> -->
+  </mat-form-field>
+  <h1>User: {{accountInput.username}}</h1>
+  <h1>Pasword: {{accountInput.password}}</h1>
 
   <!-- {{ data | json }} -->
   <!-- {{accounts$ | json}} -->

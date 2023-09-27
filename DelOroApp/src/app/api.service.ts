@@ -12,8 +12,8 @@ export class ApiService {
   getDataFromServer(route: string) {
     return this.http.get(`http://localhost:3000${route}`);
   }
-  postDataToServer(route: string) {
-    return this.http.post(`http://localhost:3000${route}`,{username: 'diego', password: '3412'});
+  postDataToServer(route: string, data:any) {
+    return this.http.post(`http://localhost:3000${route}`,data);
   }
 
   //testing....
