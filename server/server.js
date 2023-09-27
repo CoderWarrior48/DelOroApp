@@ -91,7 +91,6 @@ function Request(info) {
       app.post(info.path, (req, res) => {
         console.log('receiving data ...');
         console.log('body is ',req.body);
-        console.log(info.content)
         info.content.accounts.push(req.body)
         console.log('Updated accounts:', info.content.accounts);
         res.json(info.content.accounts);
