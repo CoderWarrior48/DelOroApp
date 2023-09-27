@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 data = [
   {
     path: '/',
+    type: 'get',
     content: {
       headerText: 'H1 Heading',
       paragraphs: [' p text 1 ', ' p text 2 '],
@@ -29,6 +30,7 @@ data = [
   },
   {
     path: '/about',
+    type: 'get',
     content: {
       headerText: 'About',
       paragraphs: [' This is the about page: ', ' 123823651023 '],
@@ -36,6 +38,7 @@ data = [
   },
   {
     path: '/resources',
+    type: 'get',
     content: {
       headerText: 'Resources',
       cards: [
@@ -63,35 +66,41 @@ data = [
       ],
     },
   },
-  // {
-  //   path: '/accounts',
-  //   content: {
-  //     accounts: [
-  //     {user: 'diego', password: '1234'},
-  //     {user: 'dh', password: '6789'}
-  //     ]
-  //   }
-  // }
+  {
+    path: '/accounts',
+    type: 'post',
+    content: {
+      accounts: [
+      {user: 'diego', password: '1234'},
+      {user: 'dh', password: '6789'}
+      ]
+    }
+  }
 ];
 
+data.map(Request);
 
-accounts = [
-  {username:"dh", password:"1234"},
-]
+function Request(info) {
+  switch(info.type) {
 
-data.map(getRequest);
+    case 'get':
+      app.get(info.path, (req, res) => {
+        res.json(info.content);
+      });
+    case 'post':
+      app.post(info.path, (req, res) => {
+        console.log('receiving data ...');
+        console.log('body is ',req.body);
+        console.log(info.content)
+        info.content.accounts.push(req.body)
+        console.log('Updated accounts:', info.content.accounts);
+        res.json(info.content.accounts);
+      });
 
-function getRequest(info) {
-  app.get(info.path, (req, res) => {
-    res.json(info.content);
-  });
+  }
 }
 
-  app.post('/accounts', (req, res) => {
-    console.log('receiving data ...');
-    console.log('body is ',req.body);
-    res.send(req.body);
-  });
+  
 
 
 app.listen(port, () =>
