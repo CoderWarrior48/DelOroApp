@@ -19,6 +19,8 @@ app.use(bodyParser.json());
 //   res.send('Book is added to the database');
 // });
 
+accounts = []
+
 data = [
   {
     path: '/',
@@ -67,10 +69,17 @@ data = [
     },
   },
   {
-    path: '/accounts',
+    path: '/create-account',
     type: 'post',
     body: {
-      accounts: [],
+      accounts
+    },
+  },
+  {
+    path: '/get-accounts',
+    type: 'get',
+    body: {
+      accounts
     },
   },
 ];
@@ -82,10 +91,11 @@ function Request(field) {
     case 'get':
       app.get(field.path, (req, res) => {
         res.json(field.body);
+        console.log('GETting data...')
       });
     case 'post':
       app.post(field.path, (req, res) => {
-        console.log('receiving data ...');
+        console.log('POSTing data...');
         console.log('Data: ', req.body);
         field.body.accounts.push(req.body);
         console.log('\nUpdated accounts:\n', field.body.accounts);

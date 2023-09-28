@@ -16,9 +16,15 @@ export class SignInComponent {
 
   constructor(public apiService: ApiService) {
   }
+
+  ngOnInit() {
+    this.contents$ = this.apiService.getDataFromServer('/resources').pipe(take(1))
+  }
+
+
   signIn() {
     console.log('posting...')
-    this.contents$ = this.apiService.postDataToServer('/accounts',this.accountInput).pipe(take(1))
+    this.contents$ = this.apiService.postDataToServer('/create-account',this.accountInput).pipe(take(1))
   }
 
   // ngOnInit() {
