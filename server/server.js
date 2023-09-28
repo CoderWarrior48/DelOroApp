@@ -84,9 +84,13 @@ data = [
   },
 ];
 
+console.log('Initilizing paths')
 data.map(Request);
 
 function Request(field) {
+  console.log(`\x1b[32m${field.path} is running as ${field.type}:`)
+  console.log(`\x1b[90m\n${JSON.stringify(field.body)}`)
+
   switch (field.type) {
     case 'get':
       app.get(field.path, (req, res) => {
@@ -106,8 +110,9 @@ function Request(field) {
         res.json(field.body.accounts);
       });
     case 'search':
+
+    
       app.get(field.path, (req, res) => {
-        console.log('GETting data...')
         console.log('SEARCHing data...')
         isAccount = field.body.accounts.filter(function(user){ return user.username == req.username});
 

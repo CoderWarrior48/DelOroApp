@@ -21,7 +21,7 @@ export class SignInComponent {
 
   signIn() {
     console.log('searching...')
-    this.isAccount$ = this.apiService.postDataToServer('/search-accounts', this.accountInput).pipe(take(1))
+    this.isAccount$ = this.apiService.postDataToServer('/search-accounts', {username: 'user', password: 'pass'}).pipe(take(1))
   }
 
 

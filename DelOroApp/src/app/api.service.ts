@@ -10,10 +10,14 @@ import { map } from "rxjs/operators";
 export class ApiService {
   constructor(private http: HttpClient) {}
   getDataFromServer(route: string) {
+    console.log(`GETing${route}`)
     return this.http.get(`http://localhost:3000${route}`);
   }
   postDataToServer(route: string, data:any) {
-    return this.http.post(`http://localhost:3000${route}`,data);
+    console.log(`POSTing to ${route}`)
+    console.log(this.http.post(`http://localhost:3000${route}`, data))
+    return this.http.post(`http://localhost:3000${route}`, data);
+   
   }
 
   //testing....
