@@ -1,6 +1,10 @@
 @use '@angular/material' as mat;
+@import "/src/styles.scss";
 
 .form {
-  width: auto;
-  color: mat.get-color-from-palette($my-accent, 500) !important;
+  margin: 30px;
+  width: 100%;
+}
+mat-form-field {
+  width: 100%;
 }
