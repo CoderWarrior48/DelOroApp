@@ -89,8 +89,10 @@ function Request(field) {
         console.log('Data: ', req.body);
         field.body.accounts.push(req.body);
         console.log('\nUpdated accounts:\n', field.body.accounts);
-        console.log('\nUpdated accounts:\n', field.body.accounts);
-
+        console.log("\nAccounts including 'd':\n",
+        field.body.accounts.filter(function(user){ return user.username.includes('d')})
+        );
+        
         res.json(field.body.accounts);
       });
   }
