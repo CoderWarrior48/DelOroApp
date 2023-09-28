@@ -15,7 +15,6 @@ export class ApiService {
   }
   postDataToServer(route: string, data:any) {
     console.log(`POSTing to ${route}`)
-    console.log(this.http.post(`http://localhost:3000${route}`, data))
     return this.http.post(`http://localhost:3000${route}`, data);
    
   }

@@ -76,7 +76,7 @@ data = [
     },
   },
   {
-    path: '/search-accounts',
+    path: '/sa',
     type: 'search',
     body: {
       accounts
@@ -110,9 +110,8 @@ function Request(field) {
         res.json(field.body.accounts);
       });
     case 'search':
-
     
-      app.get(field.path, (req, res) => {
+      app.post(field.path, (req, res) => {
         console.log('SEARCHing data...')
         isAccount = field.body.accounts.filter(function(user){ return user.username == req.username});
 
