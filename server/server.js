@@ -107,8 +107,16 @@ function Request(field) {
       });
     case 'search':
     app.get(field.path, (req, res) => {
-      res.json(field.body);
       console.log('GETting data...')
+      console.log('SEARCHing data...')
+      try {
+        var password = field.body.accounts.filter(function(user){ return user.username == req});
+      }
+      catch {
+
+      }
+      res.json(field.body);
+      
     });
   }
 }
