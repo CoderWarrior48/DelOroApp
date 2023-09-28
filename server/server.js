@@ -23,7 +23,7 @@ data = [
   {
     path: '/',
     type: 'get',
-    content: {
+    body: {
       headerText: 'H1 Heading',
       paragraphs: [' p text 1 ', ' p text 2 '],
     },
@@ -31,7 +31,7 @@ data = [
   {
     path: '/about',
     type: 'get',
-    content: {
+    body: {
       headerText: 'About',
       paragraphs: [' This is the about page: ', ' 123823651023 '],
     },
@@ -39,12 +39,12 @@ data = [
   {
     path: '/resources',
     type: 'get',
-    content: {
+    body: {
       headerText: 'Resources',
       cards: [
         {
           header: 'Aeries Parent Portal Online Gradebook',
-          content: `The Parent Portal is an online service that will allow students and parents to view grades, assignments, and attendance.  
+          body: `The Parent Portal is an online service that will allow students and parents to view grades, assignments, and attendance.  
        Click here to access portal: Aeries Parent Portal.
        
        If you don't have an active portal account, look for an email the beginning of August to get started. 
@@ -53,11 +53,11 @@ data = [
        
        Check out this video that will show you how to use the Portal to complete the Data Confirmation Process
        
-       Subscribe to Weekly Progress Emails that contain up to date student attendance and gradebook information. Click here for directions.`,
+       Subscribe to Weekly Progress Emails that contain up to date student attendance and gradebook fieldrmation. Click here for directions.`,
         },
         {
           header: 'Canvas Parent Observer Account',
-          content: `Canvas is an online platform many teachers use to host class materials, activities and grade information. If you would like access to your student's Canvas account as a Parent Observer, click here for set-up information. 
+          body: `Canvas is an online platform many teachers use to host class materials, activities and grade fieldrmation. If you would like access to your student's Canvas account as a Parent Observer, click here for set-up fieldrmation. 
       
         If you already have a Parent Observer account, you can log in from this link.
         
@@ -69,7 +69,7 @@ data = [
   {
     path: '/accounts',
     type: 'post',
-    content: {
+    body: {
       accounts: [],
     },
   },
@@ -77,19 +77,21 @@ data = [
 
 data.map(Request);
 
-function Request(info) {
-  switch (info.type) {
+function Request(field) {
+  switch (field.type) {
     case 'get':
-      app.get(info.path, (req, res) => {
-        res.json(info.content);
+      app.get(field.path, (req, res) => {
+        res.json(field.body);
       });
     case 'post':
-      app.post(info.path, (req, res) => {
+      app.post(field.path, (req, res) => {
         console.log('receiving data ...');
         console.log('Data: ', req.body);
-        info.content.accounts.push(req.body);
-        console.log('\nUpdated accounts:\n', info.content.accounts);
-        res.json(info.content.accounts);
+        field.body.accounts.push(req.body);
+        console.log('\nUpdated accounts:\n', field.body.accounts);
+        console.log('\nUpdated accounts:\n', field.body.accounts);
+
+        res.json(field.body.accounts);
       });
   }
 }
