@@ -10,6 +10,8 @@ import { Observable, take } from 'rxjs';
 export class SignInComponent {
 
   contents$: Observable<any> = new Observable<any>;
+  isAccount$: Observable<any> = new Observable<any>;
+
 
   accountInput = {username:'', password:'' }
   
@@ -17,14 +19,16 @@ export class SignInComponent {
   constructor(public apiService: ApiService) {
   }
 
-  ngOnInit() {
-    this.contents$ = this.apiService.getDataFromServer('/resources').pipe(take(1))
+  signIn() {
+    console.log('searching...')
+    this.isAccount$ = this.apiService.getDataFromServer('/search-accounts').pipe(take(1))
   }
 
 
-  signIn() {
+  signUp() {
     console.log('posting...')
     this.contents$ = this.apiService.postDataToServer('/create-account',this.accountInput).pipe(take(1))
+    
   }
 
   // ngOnInit() {

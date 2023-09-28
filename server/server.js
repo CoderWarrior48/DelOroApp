@@ -77,7 +77,7 @@ data = [
   },
   {
     path: '/get-accounts',
-    type: 'get',
+    type: 'search',
     body: {
       accounts
     },
@@ -105,6 +105,11 @@ function Request(field) {
         
         res.json(field.body.accounts);
       });
+    case 'search':
+    app.get(field.path, (req, res) => {
+      res.json(field.body);
+      console.log('GETting data...')
+    });
   }
 }
 
