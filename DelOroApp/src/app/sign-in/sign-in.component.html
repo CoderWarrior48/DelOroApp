@@ -9,20 +9,20 @@
   </ng-container>
 </ng-container>
 
-  <div class="form">
-    <mat-form-field appearance="outline" color="accent">  
+  <!-- <form class="form" > -->
+    <mat-form-field appearance="outline" color="accent">  <!--onsubmit="signIn()"-->
       <mat-label>Username:</mat-label>
-      <input matInput type="email" required="required" [(ngModel)]="accountInput.username" value="username">
+      <input matInput type="email" required="required" [(ngModel)]="accountInput.username" value="username" required>
     </mat-form-field>
     <mat-form-field appearance="outline" color="accent">
       <mat-label>Password:</mat-label>
-      <input matInput type="password" required="required" [(ngModel)]="accountInput.password" value="password">
+      <input matInput type="password" required="required" [(ngModel)]="accountInput.password" value="password" required>
     </mat-form-field>
-    <button mat-button (click)="signIn()">Sign in</button>
+    <button mat-button type="submit" (click)="signIn()">Sign in</button>
     <!-- {{postReturn | json}} -->
     <h1>User: {{accountInput.username}}</h1>
-    <h1>Pasword: {{accountInput.password}}</h1>
-  </div>
+    <h1>Password: {{accountInput.password}}</h1>
+  <!-- </form> -->
 
   <!-- {{ data | json }} -->
   <!-- {{accounts$ | json}} -->
