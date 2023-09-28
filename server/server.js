@@ -20,8 +20,9 @@ app.use(bodyParser.json());
 // });
 
 accounts = [
-  {username: 'dawson', password: '1234'}
-]
+  { username: 'dawson', password: '1234' },
+  { username: 'diego', password: '27376' },
+];
 
 data = [
   {
@@ -74,30 +75,30 @@ data = [
     path: '/create-account',
     type: 'post',
     body: {
-      accounts
+      accounts,
     },
   },
   {
     path: '/search-accounts',
     type: 'search',
     body: {
-      accounts
+      accounts,
     },
   },
 ];
 
-console.log('Initilizing paths')
+console.log('Initilizing paths');
 data.map(Request);
 
 function Request(field) {
-  console.log(`\x1b[32m${field.path} is running as ${field.type}:`)
-  console.log(`\x1b[90m\n${JSON.stringify(field.body)}`)
+  console.log(`\x1b[32m${field.path} is running as ${field.type}:`);
+  console.log(`\x1b[90m\n${JSON.stringify(field.body)}`);
 
   switch (field.type) {
     case 'get':
       app.get(field.path, (req, res) => {
         res.json(field.body);
-        console.log('GETting data...')
+        console.log('GETting data...');
       });
     case 'post':
       app.post(field.path, (req, res) => {
@@ -105,37 +106,41 @@ function Request(field) {
         console.log('Data: ', req.body);
         field.body.accounts.push(req.body);
         console.log('\nUpdated accounts:\n', field.body.accounts);
-        console.log("\nAccounts including 'd':\n",
-        field.body.accounts.filter(function(user){ return user.username.includes('d')})
+        console.log(
+          "\nAccounts including 'd':\n",
+          field.body.accounts.filter(function (user) {
+            return user.username.includes('d');
+          })
         );
-        
+
         res.json(field.body.accounts);
       });
     case 'search':
-    
       app.post(field.path, (req, res) => {
-        console.log('SEARCHing data...')
-        isAccount = field.body.accounts.filter(function(user){ return user.username == req.username});
+        console.log('SEARCHing data...');
+        isAccount = field.body.accounts.some(function (user) {
+          console.log(user.username == req.body.username);
+          return user.username == req.body.username;
+        });
 
-        if (isAccount == true) {
-          isPassword = field.body.accounts.filter(function(user){ return user.password == req.password});
-          console.log("Account exists:TRUE password:",isPassword)
+        console.log(isAccount);
 
-          if (isPassword == null) {
-            console.log("Password incorrect, returning FALSE")
-            return false
+        if (isAccount != false) {
+          isPassword = field.body.accounts.some(function (user) {
+            return user.password == req.body.password;
+          });
+
+          if (isPassword != false) {
+            return true;
+          } else {
+            console.error('Incorrect password');
+            return false;
           }
-          else {
-            console.log("Password matches, returning TRUE")
-            return true
-          }
+        } else {
+          console.error('Username not found');
+          return false;
         }
-        else {
-              
-        console.log('No term found, returning FALSE')
-        return false
-        }      
-    });
+      });
   }
 }
 
