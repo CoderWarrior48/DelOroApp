@@ -131,6 +131,7 @@ function Request(field) {
           });
 
           if (isPassword != false) {
+            console.log('Corrrect credentials');
             return true;
           } else {
             console.error('Incorrect password');
