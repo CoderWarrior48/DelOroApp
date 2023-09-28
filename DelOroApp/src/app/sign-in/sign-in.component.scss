@@ -1,0 +1,6 @@
+@use '@angular/material' as mat;
+
+.form {
+  width: auto;
+  color: mat.get-color-from-palette($my-accent, 500) !important;
+}

@@ -61,7 +61,7 @@ data = [
       
         If you already have a Parent Observer account, you can log in from this link.
         
-        If you have questions about how your student's teacher is using Canvas, please email the teacher.`
+        If you have questions about how your student's teacher is using Canvas, please email the teacher.`,
         },
       ],
     },
@@ -70,19 +70,15 @@ data = [
     path: '/accounts',
     type: 'post',
     content: {
-      accounts: [
-      {user: 'diego', password: '1238'},
-      {user: 'dh', password: '6789'}
-      ]
-    }
-  }
+      accounts: [],
+    },
+  },
 ];
 
 data.map(Request);
 
 function Request(info) {
-  switch(info.type) {
-
+  switch (info.type) {
     case 'get':
       app.get(info.path, (req, res) => {
         res.json(info.content);
@@ -90,17 +86,13 @@ function Request(info) {
     case 'post':
       app.post(info.path, (req, res) => {
         console.log('receiving data ...');
-        console.log('body is ',req.body);
-        info.content.accounts.push(req.body)
-        console.log('Updated accounts:', info.content.accounts);
+        console.log('Data: ', req.body);
+        info.content.accounts.push(req.body);
+        console.log('\nUpdated accounts:\n', info.content.accounts);
         res.json(info.content.accounts);
       });
-
   }
 }
-
-  
-
 
 app.listen(port, () =>
   console.log(`DelOroApp server listening on port ${port}`)

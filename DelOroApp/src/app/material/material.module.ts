@@ -12,7 +12,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 
@@ -32,6 +34,7 @@ const modules = [
   MatMenuModule,
   MatDividerModule,
   MatSlideToggleModule,
+  MatInputModule,
 ];
 
 @NgModule({
