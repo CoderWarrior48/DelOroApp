@@ -76,7 +76,7 @@ data = [
     },
   },
   {
-    path: '/get-accounts',
+    path: '/search-accounts',
     type: 'search',
     body: {
       accounts
@@ -106,34 +106,29 @@ function Request(field) {
         res.json(field.body.accounts);
       });
     case 'search':
-    app.get(field.path, (req, res) => {
-      console.log('GETting data...')
-      console.log('SEARCHing data...')
-      isAccount = field.body.accounts.filter(function(user){ return user.username == req.username});
+      app.get(field.path, (req, res) => {
+        console.log('GETting data...')
+        console.log('SEARCHing data...')
+        isAccount = field.body.accounts.filter(function(user){ return user.username == req.username});
 
-      if (isAccount == true) {
-        isPassword = field.body.accounts.filter(function(user){ return user.password == req.password});
-        console.log("Account exists:TRUE password:",isPassword)
+        if (isAccount == true) {
+          isPassword = field.body.accounts.filter(function(user){ return user.password == req.password});
+          console.log("Account exists:TRUE password:",isPassword)
 
-        if (isPassword == null) {
-          console.log("Password incorrect, returning FALSE")
-          return false
+          if (isPassword == null) {
+            console.log("Password incorrect, returning FALSE")
+            return false
+          }
+          else {
+            console.log("Password matches, returning TRUE")
+            return true
+          }
         }
         else {
-          console.log("Password matches, returning TRUE")
-          return true
-        }
-      }
-      else {
-            
-      console.log('No term found, returning FALSE')
-      return false
-      }
-
-
-    
-      res.json(field.body);
-      
+              
+        console.log('No term found, returning FALSE')
+        return false
+        }      
     });
   }
 }
