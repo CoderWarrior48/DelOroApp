@@ -22,7 +22,7 @@ export class SignInComponent {
   signIn() {
     console.log('searching...')
     //revert to isAccount$ ?????
-    this.contents$ = this.apiService.postDataToServer('/sa',this.accountInput).pipe(take(1))
+    this.contents$ = this.apiService.postDataToServer('/search-accounts',this.accountInput).pipe(take(1))
   }
 
 

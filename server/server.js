@@ -19,7 +19,9 @@ app.use(bodyParser.json());
 //   res.send('Book is added to the database');
 // });
 
-accounts = []
+accounts = [
+  {username: 'dawson', password: '1234'}
+]
 
 data = [
   {
@@ -76,7 +78,7 @@ data = [
     },
   },
   {
-    path: '/sa',
+    path: '/search-accounts',
     type: 'search',
     body: {
       accounts
