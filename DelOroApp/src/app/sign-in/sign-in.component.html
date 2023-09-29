@@ -1,29 +1,12 @@
-<ng-container *ngIf="{ content: contents$ | async } as data">
-  <ng-container *ngIf="data.content">
-  <ng-container *ngFor="let user of data.content"> 
-    <mat-card>
-    Username: {{user.username}}
-    Password: {{user.password}}
-    </mat-card>
-  </ng-container>
-  </ng-container>
-</ng-container>
-
-  <!-- <form class="form" > -->
-    <mat-form-field appearance="outline" color="accent">  <!--onsubmit="signIn()"-->
-      <mat-label>Username:</mat-label>
-      <input matInput type="email" required="required" [(ngModel)]="accountInput.username" value="username" required>
-    </mat-form-field>
-    <mat-form-field appearance="outline" color="accent">
-      <mat-label>Password:</mat-label>
-      <input matInput type="password" required="required" [(ngModel)]="accountInput.password" value="password" required>
-    </mat-form-field>
-    <button mat-button type="submit" (click)="signIn()">Sign in</button>
-    <!-- {{postReturn | json}} -->
-    <h1>User: {{accountInput.username}}</h1>
-    <h1>Password: {{accountInput.password}}</h1>
-  <!-- </form> -->
-
-  <!-- {{ data | json }} -->
-  <!-- {{accounts$ | json}} -->
-
+<h1>Sign in</h1>
+<form action="http://localhost:3000/login/password" method="post">
+    <section>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+    </section>
+    <section>
+        <label for="current-password">Password</label>
+        <input id="current-password" name="password" type="password" autocomplete="current-password" required>
+    </section>
+    <button type="submit">Sign in</button>
+</form>
