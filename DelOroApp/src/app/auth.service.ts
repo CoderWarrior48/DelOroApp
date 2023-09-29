@@ -8,26 +8,21 @@ import { ApiService } from './api.service';
 })
 export class AuthService {
   contents$: Observable<any> = new Observable<any>;
-  isAccount$: Observable<any> = new Observable<any>;
-
-
-  accountInput = {username:'', password:'' }
-  
+  isAccount$: Observable<any> = new Observable<any>;  
 
   constructor(public apiService: ApiService) {
-    this.accountInput
   }
 
-  signIn() {
+  signIn(accountInput: object) {
     console.log('searching...')
     //revert to isAccount$ ?????
-    this.contents$ = this.apiService.postDataToServer('/search-accounts',this.accountInput).pipe(take(1))
+    this.contents$ = this.apiService.postDataToServer('/search-accounts',accountInput).pipe(take(1))
   }
 
 
-  signUp() {
+  signUp(accountInput: object) {
     console.log('posting...')
-    this.contents$ = this.apiService.postDataToServer('/create-account',this.accountInput).pipe(take(1))
+    this.contents$ = this.apiService.postDataToServer('/create-account',accountInput).pipe(take(1))
     
   }
 

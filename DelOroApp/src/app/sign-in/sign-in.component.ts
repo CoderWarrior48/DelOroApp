@@ -7,6 +7,10 @@ import { AuthService } from '../../../../DelOroApp/src/app/auth.service';
   styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent {
+
+
+  accountInput: any = {username:'', password:'' }
+
   constructor (_authservice: AuthService) {
   }
 }

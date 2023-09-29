@@ -1,11 +1,11 @@
   <!-- <form class="form" > -->
     <mat-form-field appearance="outline" color="accent">  <!--onsubmit="signIn()"-->
       <mat-label>Username:</mat-label>
-      <input matInput type="email" required="required" [(ngModel)]="_authservice.refaccountInput.username" value="username" required>
+      <input matInput type="email" required="required" [(ngModel)]="accountInput.username" value="username" required>
     </mat-form-field>
     <mat-form-field appearance="outline" color="accent">
       <mat-label>Password:</mat-label>
-      <input matInput type="password" required="required" [(ngModel)]="_authservice.accountInput.password" value="password" required>
+      <input matInput type="password" required="required" [(ngModel)]="accountInput.password" value="password" required>
     </mat-form-field>
     <button mat-button type="submit" (click)="_authservice.signIn()">Sign in</button>
     <!-- {{postReturn | json}} -->
