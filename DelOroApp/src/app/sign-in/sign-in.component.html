@@ -7,7 +7,7 @@
       <mat-label>Password:</mat-label>
       <input matInput type="password" required="required" [(ngModel)]="accountInput.password" value="password" required>
     </mat-form-field>
-    <button mat-button type="submit" (click)="_authservice.signIn()">Sign in</button>
+    <button mat-button type="submit" (click)="_authservice.signUp(accountInput)">Sign in</button>
     <!-- {{postReturn | json}} -->
   <!-- </form> -->
 
