@@ -31,4 +31,36 @@ passport.use(new LocalStrategy(
   }
 ));
 
+const auth = () => {
+  return (req, res, next) => {
+      passport.authenticate('local', (error, user, info) => {
+          if(error) res.status(400).json({"statusCode" : 200 ,"message" : error});
+          req.login(user, function(error) {
+              if (error) return next(error);
+              next();
+          });
+      })(req, res, next);
+  }
+}
+
+passport.serializeUser(function(user, done) {
+  if(user) done(null, user);
+});
+
+passport.deserializeUser(function(id, done) {
+  done(null, id);
+});
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+const isLoggedIn = (req, res, next) => {
+  if(req.isAuthenticated()){
+      return next()
+  }
+  return res.status(400).json({"statusCode" : 400, "message" : "not authenticated"})
+}
+app.get('/getData', isLoggedIn, (req, res) => {
+  res.json("data")
+})
 //https://dev.to/jscrambler/how-to-build-authentication-in-angular-using-node-and-passport-3igg
