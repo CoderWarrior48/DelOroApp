@@ -12,7 +12,6 @@ import { MoreComponent } from '../../../DelOroApp/src/app/more/more.component';
 import { NewsComponent } from '../../../DelOroApp/src/app/news/news.component';
 import { EditComponent } from '../../../DelOroApp/src/app/edit/edit.component';
 import { SettingsComponent } from '../../../DelOroApp/src/app/settings/settings.component';
-import { SignInComponent } from '../../../DelOroApp/src/app/sign-in/sign-in.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -28,8 +27,6 @@ const routes: Routes = [
   { path: 'more', component: MoreComponent },
   { path: 'edit', component: EditComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: 'sign-in', component: SignInComponent },
-
 
 
 
