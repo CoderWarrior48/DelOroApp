@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { StudyComponent } from './study/study.component';
+import { FlashcardsComponent } from './flashcards/flashcards.component';
 
 
 
@@ -43,6 +45,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     NewsfeedComponent,
     SettingsComponent,
     SignInComponent,
+    StudyComponent,
+    FlashcardsComponent,
   ],
   imports: [
     BrowserModule,

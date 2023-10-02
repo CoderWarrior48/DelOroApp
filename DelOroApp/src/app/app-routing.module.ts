@@ -13,6 +13,8 @@ import { NewsComponent } from '../../../DelOroApp/src/app/news/news.component';
 import { EditComponent } from '../../../DelOroApp/src/app/edit/edit.component';
 import { SettingsComponent } from '../../../DelOroApp/src/app/settings/settings.component';
 import { SignInComponent } from '../../../DelOroApp/src/app/sign-in/sign-in.component';
+import { StudyComponent } from '../../../DelOroApp/src/app/study/study.component';
+import { FlashcardsComponent } from '../../../DelOroApp/src/app/flashcards/flashcards.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -29,6 +31,16 @@ const routes: Routes = [
   { path: 'edit', component: EditComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'sign-in', component: SignInComponent },
+  { 
+  path: 'study', 
+  component: StudyComponent, 
+  children: [
+    {
+        path: 'flashcards',
+        component: FlashcardsComponent,
+    },
+]},
+
 
 
 
