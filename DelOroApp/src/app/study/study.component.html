@@ -1,4 +1,4 @@
-<mat-card>
+<!-- <mat-card>
   <mat-card-header>
     <mat-card-title>Del Oro Study</mat-card-title>
     <mat-card-subtitle>Study with the new and improved Del Oro study page!</mat-card-subtitle>
@@ -46,4 +46,13 @@
     background-color: black;
     ">image placeholder</div>
   </mat-card-content>
-</mat-card>
+</mat-card> -->
+
+<nav>
+  <ul>
+    <li><a routerLink="/flashcards" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
+    <li><a routerLink="/flashcards" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
