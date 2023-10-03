@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./flashcards.component.scss']
 })
 export class FlashcardsComponent {
-
+  showDef = false
 }
