@@ -3,6 +3,6 @@
     "@angular/cli": "^16.2.2"
   },
   "scripts": {
-    "start": "npm start --prefix server & npm --prefix DelOroApp"
+    "start": "npm start --prefix server"
   }
 }
