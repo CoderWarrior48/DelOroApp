@@ -1,3 +1,29 @@
 mat-card {
   margin-top: 30px; 
+  width: 300px;
+  cursor: pointer;
+  background-color: blue;
+}
+
+mat-card-content p {
+  text-overflow: none;
+  width: 100px;
+}
+
+.sidebar-container {
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-content {
+  display: flex;
+  height: 100%;
+
+}
+
+.sidebar {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
 }
