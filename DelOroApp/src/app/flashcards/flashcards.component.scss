@@ -5,6 +5,7 @@ mat-card{
   text-align: center;
   align-items: center;
   transform: scale(1.2);
+  transition: background-color 1000ms linear;
 }
 
 #definition {
