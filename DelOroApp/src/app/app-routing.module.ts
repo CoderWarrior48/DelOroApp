@@ -15,6 +15,7 @@ import { SettingsComponent } from '../../../DelOroApp/src/app/settings/settings.
 import { SignInComponent } from '../../../DelOroApp/src/app/sign-in/sign-in.component';
 import { StudyComponent } from '../../../DelOroApp/src/app/study/study.component';
 import { FlashcardsComponent } from '../../../DelOroApp/src/app/flashcards/flashcards.component';
+import { Study4funComponent } from '../../../DelOroApp/src/app/study4fun/study4fun.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -36,10 +37,15 @@ const routes: Routes = [
   component: StudyComponent, 
   children: [
     {
-        path: 'flashcards',
-        component: FlashcardsComponent,
+      path: 'flashcards',
+      component: FlashcardsComponent,
     },
-]},
+    {
+      path: 'study4fun',
+      component: Study4funComponent,
+  },
+  ]
+},
 
 
 

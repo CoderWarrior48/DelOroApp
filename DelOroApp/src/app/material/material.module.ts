@@ -14,6 +14,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 
@@ -35,6 +36,7 @@ const modules = [
   MatDividerModule,
   MatSlideToggleModule,
   MatInputModule,
+  MatBadgeModule,
 ];
 
 @NgModule({
