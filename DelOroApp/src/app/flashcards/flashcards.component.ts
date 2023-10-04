@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class FlashcardsComponent {
   showDef = false
+
+  cards = [
+    {term:'libro', definition:'book'},
+    {term:'mochilla', definition:'backpack'}
+  ]
+
+  currentCard = 1
 }

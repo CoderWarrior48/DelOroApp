@@ -1,13 +1,21 @@
 <div>
+  <button mat-icon-button (click)="currentCard = currentCard - 1">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
   <mat-card id="term" *ngIf="!showDef" (click)="showDef = !showDef">
     <mat-card-content>
-      <h1>Spanish</h1>
+      <h1>{{cards[currentCard - 1].term}}</h1>
     </mat-card-content>
   </mat-card>
 
   <mat-card id="definition" *ngIf="showDef" (click)="showDef = !showDef">
     <mat-card-content>
-      <h1>Español</h1>
+      <h1>{{cards[currentCard - 1].definition}}</h1>
     </mat-card-content>
   </mat-card>
+
+  <button mat-icon-button (click)="currentCard = currentCard + 1">>
+    <mat-icon>chevron_right</mat-icon>
+  </button>
 </div>
