@@ -9,8 +9,14 @@ export class FlashcardsComponent {
   showDef = false
 
   cards = [
-    {term:'libro', definition:'book'},
-    {term:'mochilla', definition:'backpack'}
+    {term:'el libro', definition:'book'},
+    {term:'la mochilla', definition:'backpack'},
+    {term:'el papel', definition:'paper'},
+    {term:'el lápiz', definition:'pencil'},
+    {term:'la silla', definition: 'seat'},
+    {term:'el mapa', definition:'map'},
+
+
   ]
 
   currentCard = 1
