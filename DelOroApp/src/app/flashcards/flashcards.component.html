@@ -1,11 +1,13 @@
-<mat-card id='term'*ngIf="!showDef" (click)="showDef = !showDef">
-  <mat-card-content>
-    <h1>Spanish</h1>
-  </mat-card-content>
-</mat-card>
+<div>
+  <mat-card id="term" *ngIf="!showDef" (click)="showDef = !showDef">
+    <mat-card-content>
+      <h1>Spanish</h1>
+    </mat-card-content>
+  </mat-card>
 
-<mat-card id='definition' *ngIf="showDef" (click)="showDef = !showDef">
-  <mat-card-content>
-    <h1>Español</h1>
-  </mat-card-content>
-</mat-card>
+  <mat-card id="definition" *ngIf="showDef" (click)="showDef = !showDef">
+    <mat-card-content>
+      <h1>Español</h1>
+    </mat-card-content>
+  </mat-card>
+</div>

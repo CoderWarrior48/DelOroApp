@@ -1,57 +1,10 @@
-<!-- <mat-card>
-  <mat-card-header>
-    <mat-card-title>Del Oro Study</mat-card-title>
-    <mat-card-subtitle>Study with the new and improved Del Oro study page!</mat-card-subtitle>
-  </mat-card-header>
-</mat-card>
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title routerLink="../flashcards">Flashcards</mat-card-title>
-    <mat-card-subtitle>Work on studying anytime, anywhere with these online flashcards</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <div style="
-    width: 500px;
-    height: 200px;
-    background-color: black;
-    "
-    >image placeholder</div>
-  </mat-card-content>
-</mat-card>
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Practice quizzes</mat-card-title>
-    <mat-card-subtitle>Take a non-graded practice test before the next big exam</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <div style="
-    width: 500px;
-    height: 200px;
-    background-color: black;
-    ">image placeholder</div>
-  </mat-card-content>
-</mat-card>
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Study4fun</mat-card-title>
-    <mat-card-subtitle>Memorise concepts through these fun, competative games</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <div style="
-    width: 500px;
-    height: 200px;
-    background-color: black;
-    ">image placeholder</div>
-  </mat-card-content>
-</mat-card> -->
-
-<!-- The routed views render in the <router-outlet>-->
-
-<mat-drawer-container class="sidebar-container">
-  <mat-drawer #drawer mode="side" class="sidebar">
+<!-- <mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    roll="navigation"
+    (click)="sidenav.toggle()"
+    class="primary"
+  >
 
     <mat-list-item type="button" mat-button routerLink="/study/flashcards">
       <mat-card>
@@ -105,12 +58,43 @@
       </mat-card>
     </mat-list-item>
 
-  </mat-drawer>
+  </mat-sidenav>
+
   <div class="sidebar-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
+    <button type="button" mat-button (click)="sidenav.toggle()">
       <mat-icon>extension</mat-icon>
     </button>
     <router-outlet></router-outlet>
   </div>
-</mat-drawer-container>
+</mat-sidenav-container>
+ -->
+ <mat-toolbar id="app-toolbar" color="primary">
+  <div class="hide-gt-sm">
+  </div>
 
+  <button
+    mat-icon-button
+    routerLink="/"
+    class="branding box spacer hide-lt-md"
+  >
+    <!-- <mat-icon>home</mat-icon> -->
+    Del Oro
+  </button>
+  
+  <button
+    mat-icon-button
+    routerLink="/"
+    class="branding box spacer center hide-gt-sm"
+    [disableRipple]="true"
+  >
+    <!-- <mat-icon>home</mat-icon> -->
+    Del Oro
+  </button>
+  <button mat-raised-button color="accent" routerLink="/sign-in">Sign In</button>
+  <button mat-icon-button routerLink="/news">
+    <mat-icon matBadge="8" matBadgeSize="small" matBadgeColor="warn">feed</mat-icon>
+  </button>
+  <button mat-icon-button routerLink="/settings">
+    <mat-icon>settings</mat-icon>
+  </button>
+</mat-toolbar>

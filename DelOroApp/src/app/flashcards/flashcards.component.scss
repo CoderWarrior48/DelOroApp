@@ -1,13 +1,20 @@
 mat-card{
   width: 200px;
   height: 100px;
-  display: grid;
-  text-align: center;
-  align-items: center;
-  transform: scale(1.2);
-  transition: background-color 1000ms linear;
+  // display: grid;
+  // text-align: center;
+  // align-items: center;
+  // transition: background-color 1000ms linear;
+  
 }
 
 #definition {
   background-color: gold;
+}
+
+div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
