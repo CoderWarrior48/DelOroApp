@@ -1,21 +1,43 @@
 <div>
-  <button mat-icon-button *ngIf="currentCard != 1" (click)="currentCard = currentCard - 1">
-    <mat-icon>chevron_left</mat-icon>
+  <button
+    mat-icon-button
+    [style.visibility]="currentCard != 1 ? 'visible' : 'hidden'"
+    (click)="currentCard = currentCard - 1; showDef = false"
+  >
+    <mat-icon>arrow_back_ios</mat-icon>
   </button>
 
-  <mat-card id="term" *ngIf="!showDef" (click)="showDef = !showDef">
+  <mat-card id="term" *ngIf="!showDef">
     <mat-card-content>
-      <h1>{{cards[currentCard - 1].term}}</h1>
+      <h1 [attr.contenteditable]="editMode">
+        {{ cards[currentCard - 1].term }}
+      </h1>
     </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button (click)="editMode = !editMode">
+        <mat-icon>edit </mat-icon>
+      </button>
+    </mat-card-actions>
   </mat-card>
 
-  <mat-card id="definition" *ngIf="showDef" (click)="showDef = !showDef"> 
+  <mat-card id="definition" *ngIf="showDef">
     <mat-card-content>
-      <h1>{{cards[currentCard - 1].definition}}</h1>
+      <h1 [attr.contenteditable]="editMode">
+        {{ cards[currentCard - 1].definition }}
+      </h1>
     </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button (click)="editMode = !editMode">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </mat-card-actions>
   </mat-card>
 
-  <button mat-icon-button *ngIf="currentCard != cards.length" (click)="currentCard = currentCard + 1">
-    <mat-icon>chevron_right</mat-icon>
+  <button
+    mat-icon-button
+    [style.visibility]="currentCard != cards.length ? 'visible' : 'hidden'"
+    (click)="currentCard = currentCard + 1; showDef = false"
+  >
+    <mat-icon>arrow_forward_ios</mat-icon>
   </button>
 </div>
