@@ -3,7 +3,7 @@
 
 
 .banner {
-  background-color: mat.get-color-from-palette($my-accent, 500) !important;
+  background-color: mat.get-color-from-palette($my-accent, 100) !important;
   padding: 5px;
   color: mat.get-color-from-palette($my-accent, default-contrast)
 }
