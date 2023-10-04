@@ -1,13 +1,13 @@
 @use '@angular/material' as mat;
 @import "/src/styles.scss";
 
-mat-card {
-  width: 70%;
-  height: 60%;
+h1 {
+  width: 60vw;
+  height: 50vh;
   display: grid;
   text-align: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #definition {
