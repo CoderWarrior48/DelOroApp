@@ -30,7 +30,7 @@ export class FlashcardsComponent {
     this.key = event.key;
     switch (event.key) {
       case ' ':
-        this.showDef = !this.showDef
+        if (this.editMode == false){this.showDef = !this.showDef}
         break
   
       case 'ArrowRight':
