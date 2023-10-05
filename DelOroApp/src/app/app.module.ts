@@ -24,8 +24,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { StudyComponent } from './study/study.component';
 import { FlashcardsComponent } from './flashcards/flashcards.component';
-import { Study4funComponent } from './study4fun/study4fun.component';
-
+import { GamesComponent } from './games/games.component';
 
 
 @NgModule({
@@ -48,7 +47,7 @@ import { Study4funComponent } from './study4fun/study4fun.component';
     SignInComponent,
     StudyComponent,
     FlashcardsComponent,
-    Study4funComponent,
+    GamesComponent,
   ],
   imports: [
     BrowserModule,
