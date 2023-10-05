@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import * as BABYLON from 'babylonjs';
 
 
 @Component({
