@@ -3,28 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { ResourcesComponent } from './resources/resources.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { HomeComponent } from './home/home.component';
-import { MaterialModule } from '../../../DelOroApp/src/app/material/material.module';
-import { AcademicsComponent } from './academics/academics.component';
-import { AthleticsComponent } from './athletics/athletics.component';
-import { ActivitiesComponent } from './activities/activities.component';
-import { CounselingComponent } from './counseling/counseling.component';
-import { ContactComponent } from './contact/contact.component';
-import { MoreComponent } from './more/more.component';
-import { NewsComponent } from './news/news.component';
-import { EditComponent } from './edit/edit.component';
-import { NewsfeedComponent } from './newsfeed/newsfeed.component';
-import { SettingsComponent } from './settings/settings.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ResourcesComponent } from './pages/resources/resources.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MaterialModule } from '../../../DelOroApp/src/app/components/material/material.module';
+import { AcademicsComponent } from './pages/academics/academics.component';
+import { AthleticsComponent } from './pages/athletics/athletics.component';
+import { ActivitiesComponent } from './pages/activities/activities.component';
+import { CounselingComponent } from './pages/counseling/counseling.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { MoreComponent } from './pages/more/more.component';
+import { NewsComponent } from './pages/news/news.component';
+import { EditComponent } from './pages/edit/edit.component';
+import { NewsfeedComponent } from './components/newsfeed/newsfeed.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { StudyComponent } from './study/study.component';
-import { FlashcardsComponent } from './flashcards/flashcards.component';
-import { GamesComponent } from './games/games.component';
+import { StudyComponent } from './pages/study/study.component';
+import { FlashcardsComponent } from './components/flashcards/flashcards.component';
+import { GamesComponent } from './components/games/games.component';
+import { QuizzesComponent } from './components/quizzes/quizzes.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { GamesComponent } from './games/games.component';
     StudyComponent,
     FlashcardsComponent,
     GamesComponent,
+    QuizzesComponent,
   ],
   imports: [
     BrowserModule,

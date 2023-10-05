@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavBarService } from '../../../../DelOroApp/src/app/nav-bar/nav-bar.service';
+import { NavBarService } from './nav-bar.service';
 
 @Component({
   selector: 'app-nav-bar',

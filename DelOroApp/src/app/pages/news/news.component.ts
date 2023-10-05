@@ -1,5 +1,5 @@
 import { Component, ContentChild } from '@angular/core';
-import { NewsfeedComponent} from '../newsfeed/newsfeed.component';
+import { NewsfeedComponent} from '../../components/newsfeed/newsfeed.component';
 import {MatSnackBar} from '@angular/material/snack-bar'
 
 
