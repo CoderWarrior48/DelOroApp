@@ -26,6 +26,7 @@ import { StudyComponent } from './pages/study/study.component';
 import { FlashcardsComponent } from './components/flashcards/flashcards.component';
 import { GamesComponent } from './components/games/games.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
+import { FormEditor } from '../../../DelOroApp/src/app/components/quizzes/quizzes.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { QuizzesComponent } from './components/quizzes/quizzes.component';
     FlashcardsComponent,
     GamesComponent,
     QuizzesComponent,
+    FormEditor,
   ],
   imports: [
     BrowserModule,
