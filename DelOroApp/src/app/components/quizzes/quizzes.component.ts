@@ -24,4 +24,9 @@ export class QuizzesComponent {
   templateUrl: './form-editor.html',
   styleUrls: ['./form-editor.scss'],
 })
-export class FormEditor {}
+export class FormEditor {
+
+  addField() {
+    
+  }
+}
