@@ -16,6 +16,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 
 
 
@@ -39,6 +41,7 @@ const modules = [
   MatInputModule,
   MatBadgeModule,
   MatDialogModule,
+  DragDropModule,
 ];
 
 @NgModule({

@@ -1,14 +1,17 @@
 <div>
-<h2 mat-dialog-title>Install Angular</h2>
-<mat-dialog-content class="mat-typography">
-  <button mat-button><mat-icon>add</mat-icon>New field</button>
-  <button mat-button><mat-icon>add</mat-icon>New title</button>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Finish</button>
-</mat-dialog-actions>
-</div>
-<div class="renderedContent">
-  
+  <h2 mat-dialog-title>Install Angular</h2>
+  <mat-dialog-content class="mat-typography">
+    <button mat-button><mat-icon>add</mat-icon>New field</button>
+    <button mat-button><mat-icon>add</mat-icon>New title</button>
+
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let field of fields" cdkDrag>
+        {{field}}
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Finish</button>
+  </mat-dialog-actions>
 </div>
