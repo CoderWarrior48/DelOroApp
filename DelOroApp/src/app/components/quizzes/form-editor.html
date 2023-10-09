@@ -1,13 +1,16 @@
 <div>
   <h2 mat-dialog-title>Install Angular</h2>
   <mat-dialog-content class="mat-typography">
-    <button mat-button><mat-icon>add</mat-icon>New field</button>
+    <button mat-button (click)="addField()"><mat-icon>add</mat-icon>New field</button>
     <button mat-button><mat-icon>add</mat-icon>New title</button>
 
     <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let field of fields" cdkDrag>
-        {{field}}
-      </div>
+        <mat-card>
+          <
+        <h1>{{field.title}}</h1>
+        <input (type)="field.type" value="placeholder">
+        </mat-card>
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
