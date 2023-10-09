@@ -31,7 +31,7 @@ export class FormEditor {
   }
 
   fields = [
-    {title:'title', type: 'text', placeholder:'placeholder'},
+    {title:'title', type: 'button', placeholder:'placeholder'},
   ];
 
   drop(event: CdkDragDrop<string[]>) {

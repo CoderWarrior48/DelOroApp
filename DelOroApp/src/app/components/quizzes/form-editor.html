@@ -7,11 +7,17 @@
     <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let field of fields" cdkDrag>
         <mat-card>
-          <
-        <h1>{{field.title}}</h1>
-        <input (type)="field.type" value="placeholder">
+          <mat-card-header>
+            <mat-card-title>{{field.title}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-form-field>
+              <input (type)="field.type" value="placeholder">
+            </mat-form-field>
+          </mat-card-content>
         </mat-card>
     </div>
+  </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cancel</button>
