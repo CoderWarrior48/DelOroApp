@@ -1,19 +1,21 @@
 <div class="content">
-  <h2 mat-dialog-title>Newform</h2>
-  <mat-dialog-content>
+  
 
-
-    <button mat-button [matMenuTriggerFor]="menu">
+  <div mat-dialog-title>
+    <h2>Newform</h2>
+    <button mat-button [matMenuTriggerFor]="menu" class="addField">
       <mat-icon>add</mat-icon>New field
     </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="addField('st')">Short text</button>
-      <button mat-menu-item (click)="addField('p')">Paragraph</button>
-      <button mat-menu-item (click)="addField('mc')">Multiple choice</button>
-      <button mat-menu-item (click)="addField('cb')">Checkbox</button>
-      <button mat-menu-item>Upload</button>
-    </mat-menu>
 
+    <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="addField('st')">Short text</button>
+    <button mat-menu-item (click)="addField('p')">Paragraph</button>
+    <button mat-menu-item (click)="addField('mc')">Multiple choice</button>
+    <button mat-menu-item (click)="addField('cb')">Checkbox</button>
+    <button mat-menu-item>Upload</button>
+    </mat-menu>
+  </div>
+  <mat-dialog-content>
     <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
       <div *ngIf="fields">
         <mat-card class="example-box" *ngFor="let field of fields" cdkDrag>
@@ -22,46 +24,32 @@
           </mat-card-header>
           <mat-card-content>
             <mat-form-field *ngIf="field.type == 'st'">
-              <input
-                matInput
-                type="text"
-                value="placeholder"
-              />
+              <input matInput type="text" value="placeholder" />
             </mat-form-field>
 
             <mat-form-field *ngIf="field.type == 'p'">
-            <textarea
-              matInput
-              type="text"
-              value="placeholder"
-            ></textarea>
-          </mat-form-field>
+              <textarea matInput type="text" value="placeholder"></textarea>
+            </mat-form-field>
 
-
-              <mat-radio-group 
-                *ngIf="field.type == 'mc'"
-                class="example-radio-group"
+            <mat-radio-group
+              *ngIf="field.type == 'mc'"
+              class="example-radio-group"
+            >
+              <mat-radio-button
+                style="display: list-item; list-style-type: none"
+                *ngFor="let option of field.options"
               >
-                <mat-radio-button
-                  style="display:list-item; list-style-type: none;"
-                  *ngFor="let option of field.options"
-                >
-                  {{option}}
-                </mat-radio-button>
-              </mat-radio-group>
+                {{option}}
+              </mat-radio-button>
+            </mat-radio-group>
 
-
-
-              <div *ngIf="field.type == 'cb'">
-              <mat-checkbox 
-              style="display:list-item; list-style-type: none;"
-              *ngFor="let option of field.options"
-              >{{option}}</mat-checkbox>
-              </div>
-
-
-
-
+            <div *ngIf="field.type == 'cb'">
+              <mat-checkbox
+                style="display: list-item; list-style-type: none"
+                *ngFor="let option of field.options"
+                >{{option}}</mat-checkbox
+              >
+            </div>
           </mat-card-content>
           <mat-card-actions>
             <button mat-button>Edit</button>
@@ -71,7 +59,7 @@
     </div>
   </mat-dialog-content>
 </div>
-  <mat-dialog-actions class="actions">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Finish</button>
-  </mat-dialog-actions>
+<mat-dialog-actions class="actions">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Finish</button>
+</mat-dialog-actions>
