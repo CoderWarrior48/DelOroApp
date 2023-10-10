@@ -26,12 +26,14 @@ export class QuizzesComponent {
 })
 export class FormEditor {
 
-  addField() { 
-    this.fields.push({title:'title', type: 'text', placeholder:'placeholder'})
+  addField(type:any) { 
+    this.fields.push(
+      {title:'title', type: type, options: ['1','2']}
+      )
   }
 
   fields = [
-    {title:'title', type: 'button', placeholder:'placeholder'},
+    {title:'title', type: 'mc', options: ['1','2']}
   ];
 
   drop(event: CdkDragDrop<string[]>) {

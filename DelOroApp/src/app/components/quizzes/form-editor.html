@@ -1,11 +1,20 @@
 <div>
-  <h2 mat-dialog-title>Install Angular</h2>
+  <h2 mat-dialog-title>Newform</h2>
   <mat-dialog-content class="mat-typography">
-    <button mat-button (click)="addField()"><mat-icon>add</mat-icon>New field</button>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>add</mat-icon>New field</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (cliclk)="addField('st')">Short text</button>
+      <button mat-menu-item>Paragraph</button>
+      <button mat-menu-item (cliclk)="addField('mc')">Multiple choice</button>
+      <button mat-menu-item>Checkbox</button>
+      <button mat-menu-item>Upload</button>
+
+
+    </mat-menu>
 
     <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let field of fields" cdkDrag>
-        <mat-card>
+      <div *ngIf="fields" >
+        <mat-card  class="example-box" *ngFor="let field of fields" cdkDrag>
         <mat-card-header>
           <mat-card-title>
             {{field.title}}
@@ -13,7 +22,8 @@
         </mat-card-header>
         <mat-card-content>
             <mat-form-field>
-              <input matInput type="text" value="placeholder">
+              <input matInput type="text" value="placeholder" *ngIf="field.type == 'st'">
+              <input type="radio" value="placeholder" *ngIf="field.type == 'mc'">
             </mat-form-field>
         </mat-card-content>
       </mat-card>
