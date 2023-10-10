@@ -43,6 +43,7 @@
                 class="example-radio-group"
               >
                 <mat-radio-button
+                  style="display:list-item; list-style-type: none;"
                   *ngFor="let option of field.options"
                 >
                   {{option}}
@@ -52,7 +53,8 @@
 
 
               <div *ngIf="field.type == 'cb'">
-              <mat-checkbox
+              <mat-checkbox 
+              style="display:list-item; list-style-type: none;"
               *ngFor="let option of field.options"
               >{{option}}</mat-checkbox>
               </div>
@@ -69,7 +71,7 @@
     </div>
   </mat-dialog-content>
 </div>
-  <mat-dialog-actions align="end">
+  <mat-dialog-actions class="actions">
     <button mat-button mat-dialog-close>Cancel</button>
     <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Finish</button>
   </mat-dialog-actions>
