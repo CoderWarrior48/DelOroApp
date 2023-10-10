@@ -17,6 +17,9 @@ import { MatInputModule } from '@angular/material/input';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 
 
@@ -43,6 +46,8 @@ const modules = [
   MatBadgeModule,
   MatDialogModule,
   DragDropModule,
+  MatRadioModule,
+  MatCheckboxModule,
 ];
 
 @NgModule({

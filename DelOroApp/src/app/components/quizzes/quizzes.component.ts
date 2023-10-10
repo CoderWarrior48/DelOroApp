@@ -11,7 +11,10 @@ export class QuizzesComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
-    const dialogRef = this.dialog.open(FormEditor);
+    const dialogRef = this.dialog.open(FormEditor, {
+      height: '80%',
+      width: '100%',
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
@@ -33,7 +36,7 @@ export class FormEditor {
   }
 
   fields = [
-    {title:'title', type: 'mc', options: ['1','2']}
+    {title:'title', type: 'st', options: ['1','2']}
   ];
 
   drop(event: CdkDragDrop<string[]>) {
