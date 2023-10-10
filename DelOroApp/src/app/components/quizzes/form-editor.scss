@@ -6,10 +6,6 @@ mat-card {
   margin: 30px 0 30px 0;
 }
 
-.content {
-  height: 100%;
-}
-
 
 .accent {
   background-color: mat.get-color-from-palette($my-accent, 400) !important;
