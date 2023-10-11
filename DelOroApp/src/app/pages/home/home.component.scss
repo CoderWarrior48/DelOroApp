@@ -4,13 +4,13 @@
 
 .intro-lt {
   float: left;
-  
+  color: white;
   width: 30%;
   margin: 100px;
 }
 
 .intro-sm {
-
+  color: white;
   font-size:  25px;
   width: 80vmin;
   margin: auto;
@@ -57,4 +57,34 @@
   height: 500px;
   overflow: scroll;
   background-color: mat.get-color-from-palette($my-accent, 500) !important;
+}
+
+.text-container h1{
+
+  color: red;
+  font-size: 150px;
+  line-height: 150px;
+  // color: rgba(225,225,225, .01);
+  // background-image: url("https://github.com/CoderWarrior48/DelOroApp/blob/main/DelOroApp/src/assets/images/do-stadium.png?raw=true");
+  // background-repeat: repeat;
+  // -webkit-background-clip: text;  
+  // animation: animate 15s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+  @keyframes animate {
+    0%, 100% {
+      background-position: left top;
+    }
+    25%{
+      background-position: right bottom;
+     }
+    50% {
+      background-position: left bottom;
+    }
+    75% {
+      background-position: right top;
+    }   
 }
