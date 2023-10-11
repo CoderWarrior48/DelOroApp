@@ -38,12 +38,14 @@
 
 .newsfeed {
   width: 300px;
-  float: right;
   margin-top: 0px;
   padding: 30px;
   height: 500px;
   overflow: scroll;
   background-color: mat.get-color-from-palette($my-accent, 500) !important;
+  @include breakpoint('xs') {
+    margin: auto;
+  }
 }
 
 

@@ -1,3 +1,4 @@
+import newsFeed from './files/newsfeed.js';
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -31,6 +32,13 @@ data = [
     body: {
       headerText: 'H1 Heading',
       paragraphs: [' p text 1 ', ' p text 2 '],
+    },
+  },
+  {
+    path: '/newsfeed',
+    type: 'get',
+    body: {
+      newsFeed: [newsFeed]
     },
   },
   {
