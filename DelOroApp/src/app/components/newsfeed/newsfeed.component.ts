@@ -10,6 +10,7 @@ import { Observable, take } from 'rxjs';
 })
 export class NewsfeedComponent {
   cards$: Observable<any>
+  cards: any
   // cards: {
   //   liked: boolean,
   //   tags: string,
