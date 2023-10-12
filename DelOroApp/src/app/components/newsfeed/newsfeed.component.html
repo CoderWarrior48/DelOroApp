@@ -1,3 +1,4 @@
+<div ngIf="newsFeed$ as cards">
 <ng-container *ngFor="let card of cards">
   <mat-card class="news-card" *ngIf="card.tags.includes(tab.toLowerCase()) || (tab.toLowerCase() == 'all')">
     <mat-card-header>
@@ -30,3 +31,4 @@
     </mat-card-actions>
   </mat-card>
 </ng-container>
+</div>
