@@ -1,7 +1,22 @@
 <router-outlet></router-outlet>
+<div *ngIf="router.url === '/study'">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Flashcards</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      Learn and study terms with DO flashcards.
+    </mat-card-content>
+  </mat-card>
+  
+</div>
 
- <mat-toolbar id="app-toolbar" color="accent">
-  <button mat-button color="primary" routerLink="/study/flashcards">Flashcards</button>
-  <button mat-button color="primary" routerLink="/study/quizzes">Quizzes</button>
+<mat-toolbar id="app-toolbar" color="accent">
+  <button mat-button color="primary" routerLink="/study/flashcards">
+    Flashcards
+  </button>
+  <button mat-button color="primary" routerLink="/study/quizzes">
+    Quizzes
+  </button>
   <button mat-button color="primary" routerLink="/study/games">Games</button>
 </mat-toolbar>
