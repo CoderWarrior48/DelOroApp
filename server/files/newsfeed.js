@@ -109,6 +109,44 @@ const newsFeed = [
     `
     
   },
+  {
+    liked: false,
+    tags: 'academic',
+    title:'Physical Education Exemption',
+    subtitle:'',
+    avatar:'../../assets/images/do-logo.png',
+    image: '',
+    content: `
+    Please complete the link below to request PE exemption.  The exemption does not prevent the student from enrolling in PE if they so choose. <a href="https://docs.google.com/document/d/1sQkF4keOkIxE54NfJjtEUdVvka0T6UpvJBzCvaw5O6A/edit?usp=sharing">Click for more details and to fill out the form.</a>
+    `
+    
+  },
+  {
+    liked: false,
+    tags: 'academic',
+    title:'Universal FREE Meal Plan',
+    subtitle:'',
+    avatar:'../../assets/images/do-logo.png',
+    image: '',
+    content: `
+    Universal meals are still in effect but we ask that parents complete the applications as it provides a lot of benefits for the schools and the district. Thank you! 
+    <a href="https://drive.google.com/file/d/1ao82Niv3Cz4KBLZgBOq--tozDikoO5GW/view?usp=sharing"> Click for more details. </a>  
+    <a href="https://www.schoolnutritionandfitness.com/index.php?sid=1312080113480001&page=menus"> Click for Fall Menu. </a>
+    `
+    
+  },
+  // {
+  //   liked: false,
+  //   tags: '',
+  //   title:'template',
+  //   subtitle:'',
+  //   avatar:'../../assets/images/do-logo.png',
+  //   image: '',
+  //   content: `
+  //   Template text
+  //   `
+    
+  // },
 
 ]
 
