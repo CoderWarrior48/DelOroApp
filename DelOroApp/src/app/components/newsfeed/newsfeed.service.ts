@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
-import  { Cards }  from './newsfeed.cards';
+import { ApiService } from '../../services/api.service';
+import { Observable, take } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class NewsfeedService {
-  cards = Cards
+  cards$: Observable<any> = new Observable<any>;
 
+  constructor(public apiService: ApiService) {}
 
-  constructor() { }
+  ngOnInit() {
+    this.cards$ = this.apiService.getDataFromServer('/newsfeed').pipe(take(1))
+  }
 }
