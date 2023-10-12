@@ -1,4 +1,5 @@
 <div ngIf="cards$ | async as cards">
+  {{cards | json}}
   <ng-container *ngFor="let card of cards.body.newsfeed">
     <mat-card
       class="news-card"
