@@ -112,4 +112,4 @@ const newsFeed = [
 
 ]
 
-// export default newsFeed;
+module.exports.newsFeed = newsFeed;
