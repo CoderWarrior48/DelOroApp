@@ -1,4 +1,4 @@
-export const newsFeed = [
+const newsFeed = [
   {
     liked: false,
     tags: '#academic',
@@ -112,3 +112,4 @@ export const newsFeed = [
 
 ]
 
+// export default newsFeed;

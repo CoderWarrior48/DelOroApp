@@ -3,7 +3,7 @@
 
 
 .intro-lt {
-  float: left;
+  float: right;
   color: white;
   width: 30%;
   margin: 100px;
@@ -51,29 +51,27 @@
 
 
 .text-container h1{
-  font-size: 150px;
-  line-height: 150px;
+  font-size: 120px;
+  line-height: 120px;
   color: rgba(225,225,225, .01);
-  background-image: url("https://github.com/CoderWarrior48/DelOroApp/blob/main/DelOroApp/src/assets/images/do-stadium.png?raw=true");
-  background-repeat: repeat;
-  -webkit-background-clip:text;
-  animation: animate 15s ease-in-out infinite;
+  // background-image: url("https://github.com/CoderWarrior48/DelOroApp/blob/main/DelOroApp/src/assets/images/do-stadium.png?raw=true");
+  background: linear-gradient(-90deg, rgb(6,5,0) 40%, mat.get-color-from-palette($my-accent, 500) 60%);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  animation: animate 15s ease-in infinite;
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
 }
 
   @keyframes animate {
-    0%, 100% {
+    0% {
+      background-position: right top;
+    }
+    50% {
       background-position: left top;
     }
-    25%{
-      background-position: right bottom;
-     }
-    50% {
-      background-position: left bottom;
-    }
-    75% {
+    100% {
       background-position: right top;
     }   
 }

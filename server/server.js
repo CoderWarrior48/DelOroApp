@@ -1,4 +1,4 @@
-import newsFeed from './files/newsfeed.js';
+const newsFeed = require('./files/newsfeed.js');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -38,7 +38,7 @@ data = [
     path: '/newsfeed',
     type: 'get',
     body: {
-      newsFeed: [newsFeed]
+      newsFeed: newsFeed
     },
   },
   {
