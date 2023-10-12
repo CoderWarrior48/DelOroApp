@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { NewsfeedService} from './newsfeed.service';
 import {MatSnackBar} from '@angular/material/snack-bar'
+import { ApiService } from '../../services/api.service';
 import { Observable, take } from 'rxjs';
 
 @Component({
@@ -9,7 +9,6 @@ import { Observable, take } from 'rxjs';
   styleUrls: ['./newsfeed.component.scss']
 })
 export class NewsfeedComponent {
-  cards$: Observable<any>
   cards: any
   // cards: {
   //   liked: boolean,
@@ -23,11 +22,13 @@ export class NewsfeedComponent {
 
   @Input() tab = '';
 
+  cards$: Observable<any> = new Observable<any>;
 
-    constructor (private _newsfeedService: NewsfeedService, private _snackBar: MatSnackBar) {
-      this.cards$ = _newsfeedService.cards$;
-  
-    }
+  constructor(public apiService: ApiService, private _snackBar: MatSnackBar) {}
+
+  ngOnInit() {
+    this.cards$ = this.apiService.getDataFromServer('/newsfeed').pipe(take(1))
+  }
   
     openSnackBar(message: string, action: string) {
       this._snackBar.open(message, action);
