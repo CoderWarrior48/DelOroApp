@@ -12,14 +12,14 @@ export class QuizzesComponent {
     private formBuilder: FormBuilder,
   ) {}
 
-  checkoutForm = this.formBuilder.group({
+  form = this.formBuilder.group({
     name: '',
   });
 
   onSubmit(): void {
     // Process checkout data here
-    console.warn('Your order has been submitted', this.checkoutForm.value);
-    this.checkoutForm.reset();
+    console.warn('Your order has been submitted', this.form.value);
+    this.form.reset();
   }
 }
 
