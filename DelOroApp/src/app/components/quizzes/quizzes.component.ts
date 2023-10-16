@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
-import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
+import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-quizzes',
@@ -8,38 +8,18 @@ import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/d
   styleUrls: ['./quizzes.component.scss'],
 })
 export class QuizzesComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    private formBuilder: FormBuilder,
+  ) {}
 
-  openDialog() {
-    const dialogRef = this.dialog.open(FormEditor, {
-      height: '80%',
-      width: '100%',
-    });
+  checkoutForm = this.formBuilder.group({
+    name: '',
+  });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+  onSubmit(): void {
+    // Process checkout data here
+    console.warn('Your order has been submitted', this.checkoutForm.value);
+    this.checkoutForm.reset();
   }
 }
 
-@Component({
-  selector: 'form-editor',
-  templateUrl: './form-editor.html',
-  styleUrls: ['./form-editor.scss'],
-})
-export class FormEditor {
-
-  addField(type:any) { 
-    this.fields.push(
-      {title:'title', type: type, options: ['1','2']}
-      )
-  }
-
-  fields = [
-    {title:'title', type: 'st', options: ['1','2']}
-  ];
-
-  drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.fields, event.previousIndex, event.currentIndex);
-  }
-}

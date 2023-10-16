@@ -1,2 +1,10 @@
-
-<button mat-raised-button color="accent" (click)="openDialog()"><mat-icon>add</mat-icon>New form</button>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <button mat-raised-button color="accent" type="submit">
+    <mat-icon>add</mat-icon>New form
+  </button>
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="new form" value="" required/>
+  </mat-form-field>
+</form>
+{{t}}
