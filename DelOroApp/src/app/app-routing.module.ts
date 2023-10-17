@@ -17,6 +17,7 @@ import { StudyComponent } from '../../../DelOroApp/src/app/pages/study/study.com
 import { FlashcardsComponent } from '../../../DelOroApp/src/app/components/flashcards/flashcards.component';
 import { GamesComponent } from '../../../DelOroApp/src/app/components/games/games.component';
 import { QuizzesComponent } from '../../../DelOroApp/src/app/components/quizzes/quizzes.component';
+import { EditquizComponent } from '../../../DelOroApp/src/app/editquiz/editquiz.component';
 
 
 
@@ -35,7 +36,7 @@ const routes: Routes = [
   { path: 'edit', component: EditComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'sign-in', component: SignInComponent },
-  { 
+  {
   path: 'study', 
   component: StudyComponent, 
   children: [

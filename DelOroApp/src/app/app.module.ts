@@ -26,8 +26,8 @@ import { StudyComponent } from './pages/study/study.component';
 import { FlashcardsComponent } from './components/flashcards/flashcards.component';
 import { GamesComponent } from './components/games/games.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
-import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditquizComponent } from './editquiz/editquiz.component';
 
 
 @NgModule({
@@ -52,7 +52,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FlashcardsComponent,
     GamesComponent,
     QuizzesComponent,
-    FormComponent,
+    EditquizComponent,
   ],
   imports: [
     BrowserModule,

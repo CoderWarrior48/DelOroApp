@@ -1,9 +1,17 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <button mat-raised-button color="accent" type="submit">
-    <mat-icon>add</mat-icon>New form
+  <button 
+  mat-raised-button
+  color="accent"
+  type="submit"
+  [disabled]="!form.valid">
+    <mat-icon>assignment_add</mat-icon>New Form
   </button>
-  <mat-form-field class="example-full-width">
+  <mat-form-field class="example-full-width" appearance="outline"> 
     <mat-label>Name</mat-label>
-    <input matInput placeholder="new form" value="" required/>
+    <input matInput placeholder="new form" value="" formControlName="name" required/>
+    <mat-error *ngIf="!form.valid">this is a required field</mat-error>
   </mat-form-field>
+  
 </form>
+
+{{this.form.value.name | json}}
