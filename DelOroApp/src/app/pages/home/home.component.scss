@@ -37,7 +37,8 @@
 
 
 .newsfeed {
-  width: 300px;
+  color: black;
+  width: 20%;
   margin-top: 0px;
   padding: 30px;
   height: 500px;
@@ -46,6 +47,10 @@
   @include breakpoint('xs') {
     margin: auto;
   }
+}
+
+.welcome {
+  width: 80%
 }
 
 
