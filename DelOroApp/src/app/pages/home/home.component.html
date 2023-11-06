@@ -42,8 +42,12 @@
   </mat-card-content>
 </mat-card>
 
-  <div class="newsfeed">
-    <h1>News</h1>
+  <mat-card class="newsfeed">
+    <mat-card-header>
+      <mat-card-title>
+        <h1 class="newsfeed-title">News</h1>
+      </mat-card-title>
+  </mat-card-header>
     <app-newsfeed [tab]="'all'"></app-newsfeed>
-  </div>
+  </mat-card>
 </div>
