@@ -54,7 +54,7 @@
       {{ item.name }}
     </button>
     <button mat-raised-button color="accent" routerLink="/sign-in">Sign In</button>
-    <button mat-icon-button routerLink="/news">
+    <button mat-icon-button (click)="drawer.toggle()">
       <mat-icon matBadge="8" matBadgeSize="small" matBadgeColor="warn">feed</mat-icon>
     </button>
     <button mat-icon-button routerLink="/settings">
@@ -62,15 +62,15 @@
     </button>
   </mat-toolbar>
  
-    <mat-sidenav-container>
-      <mat-sidenav
-      #sidenav
+    <mat-drawer-container>
+      <mat-drawer
+      #drawer
       roll="navigation"
       (click)="sidenav.toggle()"
       class="primary">
 
-      </mat-sidenav>
+      </mat-drawer>
       <ng-content></ng-content>
-    </mat-sidenav-container>
+    </mat-drawer-container>
 
 </mat-sidenav-container>
