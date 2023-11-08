@@ -38,21 +38,30 @@
 
 .newsfeed {
   color: black;
-  width: 30%;
-  margin-top: 0px;
   padding: 30px;
-  height: 100vh;
-  overflow: scroll;
+
+  
   background-color: mat.get-color-from-palette($my-accent, 500) !important;
   @include breakpoint('xs') {
     margin: auto;
   }
 }
 
+.newsfeed-container {
+  height: 100vh;
+  overflow: scroll;
+  width: 30%;
+
+
+}
+
 .newsfeed-title {
-  position:fixed; 
-  z-index:1000;
-  background-color: mat.get-color-from-palette($my-accent, 500);
+  position: absolute;
+  z-index:100;
+  text-align: center;
+  width: 30%;
+  
+  // background-color: mat.get-color-from-palette($my-accent, 500);
 }
 
 .welcome {
