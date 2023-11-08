@@ -61,5 +61,16 @@
       <mat-icon>settings</mat-icon>
     </button>
   </mat-toolbar>
-  <ng-content></ng-content>
+ 
+    <mat-sidenav-container>
+      <mat-sidenav
+      #sidenav
+      roll="navigation"
+      (click)="sidenav.toggle()"
+      class="primary">
+
+      </mat-sidenav>
+      <ng-content></ng-content>
+    </mat-sidenav-container>
+
 </mat-sidenav-container>
