@@ -1,5 +1,17 @@
 mat-sidenav-container {
   height: 100%;
+
+  mat-drawer-container {
+    height: 100%;
+    
+    mat-drawer {
+      position: fixed;
+      margin-top: 64px;
+      width: 30%;
+      margin-left: 30px;
+    }
+    
+  }
   
   .primary {
     padding: 30px;
