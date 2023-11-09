@@ -65,10 +65,14 @@
     <mat-drawer-container>
       <mat-drawer
       #drawer
-      (click)="drawer.toggle()"
       mode="side"
       position="end">
-
+       <div class="newsfeed">
+        <mat-toolbar id="app-toolbar" color="primary">
+          <button mat-button class="branding box spacer center hide-gt-sm">News</button>
+        </mat-toolbar>
+          <app-newsfeed [tab]="'all'"></app-newsfeed>
+      </div>
       </mat-drawer>
       <ng-content></ng-content>
     </mat-drawer-container>
