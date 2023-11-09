@@ -65,9 +65,9 @@
     <mat-drawer-container>
       <mat-drawer
       #drawer
-      roll="navigation"
-      (click)="sidenav.toggle()"
-      class="primary">
+      (click)="drawer.toggle()"
+      mode="side"
+      position="end">
 
       </mat-drawer>
       <ng-content></ng-content>
