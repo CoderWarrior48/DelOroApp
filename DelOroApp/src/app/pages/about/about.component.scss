@@ -3,10 +3,7 @@
 
 
 .banner {
-  background-color: mat.get-color-from-palette($my-accent, 200) !important;
-  padding: 5px;
-  color: mat.get-color-from-palette($my-accent, default-contrast);
-  border-radius: 5px;
+  background-image: url();
 }
 
 mat-card {
