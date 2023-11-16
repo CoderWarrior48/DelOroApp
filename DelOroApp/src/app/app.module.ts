@@ -28,6 +28,7 @@ import { GamesComponent } from './components/games/games.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditquizComponent } from './editquiz/editquiz.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { EditquizComponent } from './editquiz/editquiz.component';
     GamesComponent,
     QuizzesComponent,
     EditquizComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
